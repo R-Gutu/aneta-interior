@@ -1,0 +1,154 @@
+'use client'
+import { useEffect, useState } from "react";
+import Image from "next/image";
+
+export default function Partners() {
+  const partners = [
+    {
+      id: 1,
+      name: "EGLO",
+      logo: "/images/partners1.png",
+      alt: "EGLO lighting partner"
+    },
+    {
+      id: 2,
+      name: "TANDEM",
+      logo: "/images/partners2.png",
+      alt: "TANDEM design partner"
+    },
+    {
+      id: 3,
+      name: "Lustre.ro",
+      logo: "/images/partners3.png",
+      alt: "Lustre.ro lighting partner"
+    },
+    {
+      id: 4,
+      name: "MOBEXPERT",
+      logo: "/images/partners4.png",
+      alt: "MOBEXPERT furniture partner"
+    },
+    {
+      id: 5,
+      name: "Vioni",
+      logo: "/images/partners5.png",
+      alt: "Vioni design partner"
+    },
+    {
+      id: 6,
+      name: "Elves",
+      logo: "/images/partners6.png",
+      alt: "Elves design partner"
+    }
+  ];
+
+  // Duplicate partners for seamless scrolling
+  const duplicatedPartners = [...partners, ...partners];
+  
+  const [isPaused, setIsPaused] = useState(false);
+
+  const stats = [
+    {
+      id: 1,
+      number: "10",
+      suffix: "+",
+      label: "ani pe piață",
+      color: "text-black"
+    },
+    {
+      id: 2,
+      number: "110",
+      suffix: "+",
+      label: "proiecte realizate",
+      color: "text-black"
+    },
+    {
+      id: 3,
+      number: "25",
+      suffix: "+",
+      label: "proiecte în UE",
+      color: "text-black"
+    },
+    {
+      id: 4,
+      number: "300",
+      suffix: "+",
+      label: "clienți mulțumiți",
+      color: "text-black"
+    }
+  ];
+
+  return (
+    <section className="w-full py-16 px-4 md:px-8 lg:px-16 bg-gray-50">
+      <div className="max-w-7xl mx-auto">
+        {/* Section Title */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-black">
+            Partenerii noștri
+          </h2>
+        </div>
+
+        {/* Partners Logos - Auto Scrolling */}
+        <div className="relative overflow-hidden mb-16">
+          <div 
+            className={`flex gap-8 md:gap-12 lg:gap-16 ${isPaused ? '' : 'animate-scroll'}`}
+            style={{ width: `${duplicatedPartners.length * 160}px` }}
+          >
+            {duplicatedPartners.map((partner, index) => (
+              <div
+                key={`${partner.id}-${index}`}
+                className="flex items-center justify-center h-12 md:h-16 flex-shrink-0"
+                style={{ width: '120px' }}
+              >
+                <Image
+                  src={partner.logo}
+                  alt={partner.alt}
+                  width={120}
+                  height={60}
+                  className="max-h-full w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Statistics Card */}
+        <div className="bg-white rounded-3xl shadow-lg p-8 md:p-12 font-inter">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={stat.id} className="flex flex-col items-center justify-center text-center">
+                <div className="mb-3">
+                  <span className={`text-4xl md:text-5xl lg:text-6xl font-bold ${stat.color}`}>
+                    {stat.number}
+                  </span>
+                  <span className="text-3xl md:text-4xl lg:text-5xl font-bold text-orange-400">
+                    {stat.suffix}
+                  </span>
+                </div>
+                <p className="text-sm w-fit flex items-center justify-center md:text-base text-neutral-700 text-center font-medium leading-tight">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Custom CSS for scrolling animation */}
+        <style jsx>{`
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-${partners.length * 160}px);
+            }
+          }
+          
+          .animate-scroll {
+            animation: scroll 20s linear infinite;
+          }
+        `}</style>
+      </div>
+    </section>
+  );
+}

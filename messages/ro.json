@@ -1,0 +1,13 @@
+{
+    "header": {
+  "logoAlt": "siglă",
+  "burgerAlt": "meniul de navigare",
+  "closeAlt": "închide meniul",
+  "nav": {
+    "about": "Despre noi",
+    "services": "Servicii",
+    "proiecte": "Proiecte",
+    "contacte": "Contacte"
+  }
+}
+}

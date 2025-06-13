@@ -1,0 +1,13 @@
+{
+    "header": {
+    "logoAlt": "логотип",
+    "burgerAlt": "меню навигации",
+    "closeAlt": "закрыть меню",
+        "nav": {
+            "about": "О нас",
+            "services": "Услуги",
+            "proiecte": "Проекты",
+            "contacte": "Контакты"
+        }
+    }
+}
