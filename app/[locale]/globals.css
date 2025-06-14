@@ -8,6 +8,7 @@
 @theme inline {
   --font-inter: var(--font-inter);
   --font-bricolage: var(--font-bricolage);
+  --font-dancing-script: var(--font-dancing-script);
 }
 
 body {
