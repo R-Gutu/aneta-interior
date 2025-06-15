@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Bricolage_Grotesque } from "next/font/google";
+import { Inter, Bricolage_Grotesque, Montserrat } from "next/font/google";
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { domAnimation, LazyMotion } from "motion/react";
 import Header from "./_components/Header";
+import Footer from "./_components/Footer";
 
 const inter = Inter({
   subsets: ['latin', 'cyrillic'],
@@ -13,6 +14,11 @@ const inter = Inter({
 const bricolage = Bricolage_Grotesque({
   subsets: ['latin'],
   variable: '--font-bricolage'
+})
+
+const montserrat = Montserrat({
+  subsets: ['latin', 'cyrillic'],
+  variable: '--font-montserrat'
 })
 
 export const metadata: Metadata = {
@@ -28,12 +34,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${bricolage.variable} antialiased`}
+        className={`${inter.variable} ${bricolage.variable} ${montserrat.variable} antialiased`}
       >
         <LazyMotion features={domAnimation}>
           <NextIntlClientProvider>
             <Header />
             {children}
+            <Footer />
           </NextIntlClientProvider>
         </LazyMotion>
       </body>
