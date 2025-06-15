@@ -65,7 +65,7 @@ export default function Footer() {
                                         className="group relative p-2 rounded-full bg-white shadow-sm border border-gray-200/50 transition-all duration-300 hover:shadow-lg hover:shadow-gray-900/10 hover:scale-110 hover:-translate-y-1"
                                         aria-label={`Follow us on ${name}`}
                                     >
-                                        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-amber-400/20 to-orange-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                         <Image
                                             src={image}
                                             width={32}
@@ -82,7 +82,7 @@ export default function Footer() {
                         <div className="space-y-8">
                             <h3 className="font-inter font-bold text-black text-xl tracking-wide relative">
                                 CONTACTE
-                                <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+                                <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-gradient-to-r from-amber-500 to-orange-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
                             </h3>
                             
                             <div className="space-y-6">
@@ -91,7 +91,7 @@ export default function Footer() {
                                     <h4 className="font-inter font-bold text-black text-lg">TELEFON:</h4>
                                     <Link 
                                         href="tel:+40732678611"
-                                        className="inline-block font-montserrat text-gray-600 text-sm hover:text-blue-600 transition-colors duration-300 hover:underline decoration-blue-600 underline-offset-4"
+                                        className="inline-block font-montserrat text-gray-600 text-sm hover:text-amber-600 transition-colors duration-300 hover:underline decoration-amber-600 underline-offset-4"
                                     >
                                         +40 732 678 611
                                     </Link>
@@ -119,10 +119,10 @@ export default function Footer() {
                                     <Link
                                         key={index}
                                         href={item.href}
-                                        className="font-inter text-gray-800 hover:text-blue-600 transition-all duration-300 lg:hover:translate-x-2 hover:font-semibold relative group"
+                                        className="font-inter text-gray-800 hover:text-amber-600 transition-all duration-300 lg:hover:translate-x-2 hover:font-semibold relative group"
                                     >
                                         {item.name}
-                                        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300" />
+                                        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-600 group-hover:w-full transition-all duration-300" />
                                     </Link>
                                 ))}
                             </div>
@@ -132,10 +132,10 @@ export default function Footer() {
                         <div className="flex flex-col items-start lg:items-end space-y-3">
                             <h4 className="font-inter text-black font-semibold">Limbi</h4>
                             <div className="flex gap-3">
-                                <button className="font-montserrat text-black font-semibold px-3 py-1 rounded-md bg-blue-100 hover:bg-blue-200 transition-colors duration-300">
+                                <button className="font-montserrat text-black font-semibold px-3 py-1 rounded-md bg-amber-100 hover:bg-amber-200 transition-colors duration-300">
                                     RO
                                 </button>
-                                <button className="font-montserrat text-gray-500 hover:text-gray-800 px-3 py-1 rounded-md hover:bg-gray-100 transition-all duration-300">
+                                <button className="font-montserrat text-gray-500 hover:text-gray-800 px-3 py-1 rounded-md hover:bg-orange-50 transition-all duration-300">
                                     RU
                                 </button>
                             </div>
@@ -153,7 +153,7 @@ export default function Footer() {
                             Creat de{" "}
                             <Link 
                                 href="#" 
-                                className="text-blue-600 hover:text-blue-700 transition-colors duration-300 hover:underline"
+                                className="text-amber-600 hover:text-orange-600 transition-colors duration-300 hover:underline"
                             >
                                 Quant-Apps
                             </Link>
