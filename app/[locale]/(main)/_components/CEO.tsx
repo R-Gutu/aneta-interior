@@ -1,100 +1,69 @@
 'use client'
 
+import { useRouter } from '@/i18n/navigation';
+import { cn } from '@/lib/utils';
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 export default function CEO() {
-  const [hoveredSection, setHoveredSection] = useState(null);
+  const router = useRouter();
+  const handlePush = (link: string) => {
+          try {
+              router.push(link);
+          } catch (error) {
+              console.error('Navigation error:', error);
+          }
+      }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-50 relative">
+      <div className={cn("absolute left-[5%] sm:left-[8%] lg:left-[10%] top-[280px] flex flex-col items-start justify-start gap-4", "max-sm:hidden")}>
+        <h2 className='text-2xl sm:text-3xl lg:text-5xl font-bold text-black font-bricolage z-20'>
+          CEO<br/>
+          <span>Designer interior</span>
+        </h2>
+        <p className='text-xl sm:text-2xl lg:text-3xl font-medium text-black font-dancing-script'>Ana Jantovan-Șum</p>
+        <div onClick={() => handlePush('/about')} className="flex items-center font-inter text-lg sm:text-xl font-medium shadow-md text-black z-20 justify-center bg-white rounded-[16px] px-8 sm:px-10 py-4 sm:py-5 border-2 border-[#D9D9D9] hover:scale-105 cursor-pointer hover:bg-gray-100 transition-all duration-300">
+            <p>Vezi serviciile</p>
+            <Image src='/svgs/right-arrow.svg' alt='arrow' width={20} height={20} className='ml-2 inline-block' />
+        </div>
+      </div>
       {/* Hero Section */}
-      <div className="relative h-screen flex items-center justify-between px-8 lg:px-16">
-        {/* Left Content */}
-        <div className="flex-1 max-w-lg z-10">
-          <h1 className="text-4xl lg:text-6xl font-light text-gray-900 mb-4 leading-tight">
+        <div className="flex items-center justify-center text-black font-bold font-bricolage text-center z-10 px-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-6xl mb-4 leading-tight">
             Un singur nume.<br />
-            <span className="text-gray-700">O viziune unică.</span>
+            <span className="text-center">O viziune unică.</span>
           </h1>
-          
-          <div className="mt-12">
-            <h2 className="text-xl font-semibold text-gray-900 mb-2">CEO</h2>
-            <h3 className="text-lg text-gray-700 mb-1">Designer interior</h3>
-            <p className="text-sm text-gray-600 italic mb-8">Ana Diaconu-Savu</p>
-            
-            <button 
-              className="bg-white border border-gray-300 px-6 py-3 rounded-full text-sm text-gray-700 hover:bg-gray-50 transition-all duration-300 shadow-sm hover:shadow-md"
-              onMouseEnter={() => setHoveredSection('about')}
-              onMouseLeave={() => setHoveredSection(null)}
-            >
-              Aflați despre noi ↗
-            </button>
-          </div>
         </div>
+        <div className={cn("flex items-center justify-end px-4", "max-xl:justify-end max-sm:justify-center")}>
+          <Image
+            src="/images/ceo.png"
+            alt="CEO"
+            width={700}
+            height={700}
+            className='ml-0 sm:ml-10 lg:ml-20 w-full max-w-[500px] sm:max-w-[600px] lg:max-w-[700px] h-auto'
+          />
+        </div>
+      <div className="relative min-h-[400px] flex flex-col items-center justify-center text-center px-4">
+      {/* Background Image */}
+      <Image 
+        src="/images/contact.png" 
+        alt="Contact Background" 
+        fill
+        className="object-cover"
+        priority
+      />
 
-        {/* Right Image */}
-        <div className="flex-1 flex justify-end">
-          <div className="relative">
-            <div className="w-80 h-96 bg-gray-200 rounded-lg overflow-hidden shadow-lg">
-              {/* Placeholder for portrait image */}
-              <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-300 flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <div className="w-16 h-16 bg-white rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-2xl">👤</span>
-                  </div>
-                  <p className="text-sm">Portrait Image</p>
-                </div>
-              </div>
-            </div>
-          </div>
+      {/* Content */}
+    <div className={"relative z-20 max-w-xs sm:max-w-2xl lg:max-w-4xl mx-auto"}>
+        <h1 className="text-white text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8 drop-shadow-lg font-bricolage">
+          Hai să creăm interioare care inspiră și rămân în memorie.
+        </h1>
+        <div className="bg-white p-3 rounded-full shadow-lg text-center font-inter text-black font-bold text-lg sm:text-xl cursor-pointer hover:bg-gray-100 hover:scale-105 transition-all duration-300 inline-block">
+          Contactează-ne
         </div>
       </div>
-
-      {/* Bottom Section */}
-      <div className="relative h-screen">
-        {/* Dark overlay background */}
-        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-        
-        {/* Background image placeholder */}
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-800 to-gray-900">
-          <div className="w-full h-full bg-gradient-to-br from-gray-700 via-gray-800 to-gray-900 flex items-center justify-center">
-            <div className="text-center text-gray-400">
-              <div className="w-24 h-24 bg-gray-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                <span className="text-3xl">🏠</span>
-              </div>
-              <p className="text-sm">Interior Design Background</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Content overlay */}
-        <div className="relative z-10 h-full flex items-center justify-center px-8">
-          <div className="text-center max-w-4xl">
-            <h2 className="text-4xl lg:text-6xl font-light text-white mb-8 leading-tight">
-              Hai să creăm interioare care<br />
-              <span className="text-gray-300">inspiră și rămân în memorie.</span>
-            </h2>
-            
-            <button 
-              className="bg-white text-gray-900 px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-              onMouseEnter={() => setHoveredSection('contact')}
-              onMouseLeave={() => setHoveredSection(null)}
-            >
-              Contactează-ne
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Floating elements for visual interest */}
-      <div className="fixed top-20 right-20 w-2 h-2 bg-gray-400 rounded-full opacity-60 animate-pulse"></div>
-      <div className="fixed bottom-32 left-16 w-1 h-1 bg-gray-300 rounded-full opacity-40 animate-pulse delay-1000"></div>
-      
-      {/* Hover effects */}
-      {hoveredSection && (
-        <div className="fixed inset-0 pointer-events-none">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-50 to-transparent opacity-10 animate-pulse"></div>
-        </div>
-      )}
     </div>
+  </div>
   );
 }

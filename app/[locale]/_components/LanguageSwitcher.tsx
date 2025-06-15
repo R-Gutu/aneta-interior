@@ -39,7 +39,7 @@ const LanguageSwitcher = ({ className }: { className?: string }) => {
                     {isComponentVisible && (
                         <motion.ul
                             ref={ref as React.RefObject<HTMLUListElement>}
-                            className={cn('absolute bg-[#00000080] px-0.5')}
+                            className={cn('absolute px-0.5')}
                             initial={{ opacity: 0, y: -26, height: 0 }}
                             animate={{ opacity: 1, y: -26, height: 'auto' }}
                             exit={{ opacity: 0, y: 0, height: 0 }}
