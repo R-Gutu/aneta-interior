@@ -47,12 +47,12 @@ export default function Footer() {
                         {/* Logo and Social Links */}
                         <div className="space-y-6">
                             <div className="group">
-                                <Image 
+                                <Image
                                     src="/images/logo_footer.png" 
                                     width={130} 
                                     height={130} 
                                     alt="Aneta Design Interior Logo"
-                                    className="transition-all duration-500 group-hover:scale-105 group-hover:drop-shadow-lg"
+                                    className="rounded-full transition-all duration-500 group-hover:scale-105 group-hover:drop-shadow-lg"
                                 />
                             </div>
                             
