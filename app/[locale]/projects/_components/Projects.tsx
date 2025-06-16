@@ -35,7 +35,7 @@ const Projects = () => {
             onClick={() => setActiveFilter(filter)}
             className={`px-3 sm:px-4 lg:px-6 py-2 sm:py-3 rounded-full cursor-pointer text-xs sm:text-sm font-medium font-inter transition-all duration-200 whitespace-nowrap ${
               activeFilter === filter
-                ? 'bg-orange-400 text-white shadow-md'
+                ? 'bg-[#CDA274] text-white shadow-md'
                 : 'bg-gray-100 text-gray-600 hover:bg-gray-200 active:bg-gray-300'
             }`}
           >
