@@ -1,8 +1,10 @@
-import React from 'react'
-
+import Face from "./_sections/Face"
 const page = () => {
   return (
-    <div>services</div>
+    <div>
+      <Face />
+
+    </div>
   )
 }
 
