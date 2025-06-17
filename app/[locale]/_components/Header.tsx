@@ -2,11 +2,12 @@
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 import { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { AnimatePresence } from "framer-motion"
 import LanguageSwitcher from "./LanguageSwitcher"
 import { useTranslations } from "next-intl"
 import { useRouter } from "@/i18n/navigation"
 import { Menu, X } from "lucide-react"
+import * as m from 'motion/react-m';
 
 const NAV_ITEMS = [
   { key: "about", link: "/about" },
@@ -77,15 +78,13 @@ const Header = () => {
     closed: {
       x: "100%",
       transition: {
-        duration: 0.3,
-        ease: [0.23, 1, 0.32, 1]
+        duration: 0.3
       }
     },
     open: {
       x: 0,
       transition: {
         duration: 0.4,
-        ease: [0.23, 1, 0.32, 1],
         staggerChildren: 0.1,
         delayChildren: 0.2
       }
@@ -97,16 +96,14 @@ const Header = () => {
       x: 50,
       opacity: 0,
       transition: {
-        duration: 0.3,
-        ease: [0.23, 1, 0.32, 1]
+        duration: 0.3
       }
     },
     open: {
       x: 0,
       opacity: 1,
       transition: {
-        duration: 0.4,
-        ease: [0.23, 1, 0.32, 1]
+        duration: 0.4
       }
     }
   };
@@ -172,7 +169,7 @@ const Header = () => {
         </div>
         
         {/* Mobile menu button */}
-        <motion.button
+        <m.button
           className={cn(
             "lg:hidden bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 relative",
             // Responsive button sizing and positioning
@@ -190,7 +187,7 @@ const Header = () => {
         >
           <AnimatePresence mode="wait">
             {menuOpen ? (
-              <motion.div
+              <m.div
                 key="close"
                 initial={{ rotate: -180, opacity: 0 }}
                 animate={{ rotate: 0, opacity: 1 }}
@@ -198,9 +195,9 @@ const Header = () => {
                 transition={{ duration: 0.3 }}
               >
                 <X size={20} className="sm:w-6 sm:h-6 md:w-7 md:h-7 text-gray-700" />
-              </motion.div>
+              </m.div>
             ) : (
-              <motion.div
+              <m.div
                 key="menu"
                 initial={{ rotate: 180, opacity: 0 }}
                 animate={{ rotate: 0, opacity: 1 }}
@@ -208,10 +205,10 @@ const Header = () => {
                 transition={{ duration: 0.3 }}
               >
                 <Menu size={20} className="sm:w-6 sm:h-6 md:w-7 md:h-7 text-gray-700" />
-              </motion.div>
+              </m.div>
             )}
           </AnimatePresence>
-        </motion.button>
+        </m.button>
         
         {/* Desktop navigation */}
         <div className={cn(
@@ -227,7 +224,7 @@ const Header = () => {
             "text-base lg:text-lg xl:text-xl"
           )}>
             {NAV_ITEMS.map(({ key, link }) => (
-              <motion.li
+              <m.li
                 key={key}
                 className="cursor-pointer font-inter text-black transition-colors duration-200 hover:text-[#FF001D] px-2 py-1 rounded-md hover:bg-gray-50"
                 onClick={() => handlePush(link)}
@@ -239,7 +236,7 @@ const Header = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 {t(`nav.${key}`)}
-              </motion.li>
+              </m.li>
             ))}
           </ul>
         </div>
@@ -250,7 +247,7 @@ const Header = () => {
         {menuOpen && (
           <>
             {/* Background overlay */}
-            <motion.div
+            <m.div
               className="lg:hidden fixed inset-0 bg-black/20 backdrop-blur-sm z-40"
               variants={overlayVariants}
               initial="closed"
@@ -260,7 +257,7 @@ const Header = () => {
             />
             
             {/* Mobile menu panel */}
-            <motion.div
+            <m.div
               className={cn(
                 "lg:hidden fixed top-0 right-0 bottom-0 z-50 shadow-2xl",
                 // Responsive menu width
@@ -310,12 +307,12 @@ const Header = () => {
                   "py-4 sm:py-6",
                   "px-3 sm:px-4 md:px-5"
                 )}>
-                  <motion.ul 
+                  <m.ul 
                     className="space-y-1 sm:space-y-2"
                     variants={menuVariants}
                   >
                     {NAV_ITEMS.map(({ key, link }, index) => (
-                      <motion.li
+                      <m.li
                         key={key}
                         variants={itemVariants}
                         whileHover={{ 
@@ -351,13 +348,13 @@ const Header = () => {
                             </div>
                           </div>
                         </button>
-                      </motion.li>
+                      </m.li>
                     ))}
-                  </motion.ul>
+                  </m.ul>
                 </div>
                 
                 {/* Language switcher for larger mobile screens */}
-                <motion.div
+                <m.div
                   className="xs:flex hidden mt-auto pt-4 sm:pt-6 px-4 sm:px-5 md:px-6 border-t border-gray-200/30"
                   variants={itemVariants}
                 >
@@ -365,12 +362,12 @@ const Header = () => {
                     <p className="text-gray-600 text-xs sm:text-sm font-medium mb-2">Language</p>
                     <LanguageSwitcher className="text-gray-700" />
                   </div>
-                </motion.div>
+                </m.div>
 
                 {/* Decorative element */}
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FF001D] via-pink-400 to-purple-400"></div>
               </div>
-            </motion.div>
+            </m.div>
           </>
         )}
       </AnimatePresence>

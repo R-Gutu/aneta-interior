@@ -65,7 +65,6 @@ const Project = ({ slide1, slide2, filter }: ProjectProps) => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut",
         staggerChildren: 0.2
       }
     }
@@ -77,8 +76,7 @@ const Project = ({ slide1, slide2, filter }: ProjectProps) => {
       opacity: 1, 
       y: 0,
       transition: {
-        duration: 0.5,
-        ease: "easeOut"
+        duration: 0.5
       }
     }
   };
@@ -101,7 +99,7 @@ const Project = ({ slide1, slide2, filter }: ProjectProps) => {
   };
 
   const slideTransition = {
-    x: { type: "spring", stiffness: 300, damping: 30 },
+    x: { stiffness: 300, damping: 30 },
     opacity: { duration: 0.2 }
   };
 
