@@ -2,28 +2,44 @@
 
 import { useState } from 'react';
 import Project from './Project';
-import { Pair } from '@/lib/Types/Pair';
+import { FilterType, Pair, ProjectType } from '@/lib/Types/Pair';
 import { projects } from '@/lib/data/projects.data';
 
 const Projects = () => {
-  const [activeFilter, setActiveFilter] = useState('Living');
+  const [activeFilter, setActiveFilter] = useState<FilterType>('Living');
   
-  const filters = ['Living', 'Bucătărie', 'Dormitor', 'Baie', 'Cameră pentru copii'];
+  const filters: FilterType[] = ['Living', 'Bucătărie', 'Dormitor', 'Baie', 'Cameră pentru copii'];
 
-  // Create pairs of projects without repetition
-  const createProjectPairs = (): Pair[] => {
+  const getProjectsByFilter = (filter: FilterType): ProjectType[] => {
+    return projects.map(project => ({
+      ...project,
+      // Only include the relevant room data
+      living: filter === 'Living' ? project.living : [],
+      kitchen: filter === 'Bucătărie' ? project.kitchen : [],
+      bedroom: filter === 'Dormitor' ? project.bedroom : [],
+      bathroom: filter === 'Baie' ? project.bathroom : [],
+      bedroom_children: filter === 'Cameră pentru copii' ? project.bedroom_children : []
+    }));
+  };
+
+  // Create pairs of projects from filtered projects
+  const createProjectPairs = (filteredProjects: ProjectType[]): Pair[] => {
     const pairs: Pair[] = [];
-    for (let i = 0; i < projects.length; i += 2) {
-      const pair: Pair = {
-        slide1: projects[i]?.slides || [],
-        slide2: projects[i + 1]?.slides || []
-      };
-      pairs.push(pair);
+    for (let i = 0; i < filteredProjects.length; i += 2) {
+      if (filteredProjects[i] && filteredProjects[i + 1]) {
+        const pair: Pair = {
+          slide1: filteredProjects[i],
+          slide2: filteredProjects[i + 1]
+        };
+        pairs.push(pair);
+      }
     }
     return pairs;
   };
 
-  const projectPairs = createProjectPairs();
+  // Get filtered projects and create pairs
+  const filteredProjects = getProjectsByFilter(activeFilter);
+  const projectPairs = createProjectPairs(filteredProjects);
 
   return (
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-white">
@@ -49,7 +65,9 @@ const Projects = () => {
         {projectPairs.map((pair, index) => (
           <Project 
             key={index} 
-            {...pair}
+            slide1={pair.slide1}
+            slide2={pair.slide2}
+            filter={activeFilter}
           />
         ))}
       </div>
