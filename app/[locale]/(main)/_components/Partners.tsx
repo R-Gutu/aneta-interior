@@ -1,5 +1,4 @@
 'use client'
-import { useEffect, useState } from "react";
 import Image from "next/image";
 
 export default function Partners() {
@@ -44,8 +43,6 @@ export default function Partners() {
 
   // Duplicate partners for seamless scrolling
   const duplicatedPartners = [...partners, ...partners];
-  
-  const [isPaused, setIsPaused] = useState(false);
 
   const stats = [
     {
@@ -91,7 +88,7 @@ export default function Partners() {
         {/* Partners Logos - Auto Scrolling */}
         <div className="relative overflow-hidden mb-16">
           <div 
-            className={`flex gap-8 md:gap-12 lg:gap-16 ${isPaused ? '' : 'animate-scroll'}`}
+            className={`flex gap-8 md:gap-12 lg:gap-16 animate-scroll`}
             style={{ width: `${duplicatedPartners.length * 160}px` }}
           >
             {duplicatedPartners.map((partner, index) => (
@@ -116,7 +113,7 @@ export default function Partners() {
         <div className="bg-white rounded-3xl shadow-lg p-8 md:p-12 font-inter">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={stat.id} className="flex flex-col items-center justify-center text-center">
+              <div key={index} className="flex flex-col items-center justify-center text-center">
                 <div className="mb-3">
                   <span className={`text-4xl md:text-5xl lg:text-6xl font-bold ${stat.color}`}>
                     {stat.number}

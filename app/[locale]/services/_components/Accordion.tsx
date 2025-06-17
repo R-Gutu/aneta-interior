@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
+import Image from 'next/image';
 
 const Accordion = ({ 
   title, 
@@ -57,9 +58,11 @@ const Accordion = ({
               {imagePath && (
                 <div className="lg:w-1/3">
                   <div className="relative">
-                    <img 
+                    <Image
                       src={imagePath} 
                       alt={title}
+                      width={1200}
+                      height={1200}
                       className="w-full h-48 object-cover rounded-2xl"
                     />
                     {/* Wireframe overlay effect */}
