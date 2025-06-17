@@ -13,6 +13,7 @@ interface ProjectProps {
 const Project = ({ slide1, slide2, filter }: ProjectProps) => {
   const [currentSlide1, setCurrentSlide1] = useState(0);
   const [currentSlide2, setCurrentSlide2] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState<Set<string>>(new Set());
 
   // Helper function to get photos based on filter
   const getPhotosForFilter = (project: ProjectType, filter: FilterType): Photo[] => {
@@ -40,6 +41,34 @@ const Project = ({ slide1, slide2, filter }: ProjectProps) => {
     setCurrentSlide1(0);
     setCurrentSlide2(0);
   }, [filter]);
+
+  // Preload images for better performance
+  useEffect(() => {
+    const preloadImages = async () => {
+      const allPhotos = [...photos1, ...photos2];
+      const imagePromises = allPhotos.map((photo) => {
+        return new Promise((resolve) => {
+          if (photo?.image) {
+            const img = new window.Image();
+            img.onload = () => {
+              setImagesLoaded(prev => new Set(prev).add(photo.image));
+              resolve(photo.image);
+            };
+            img.onerror = () => resolve(photo.image); // Still resolve to avoid hanging
+            img.src = photo.image;
+          } else {
+            resolve(null);
+          }
+        });
+      });
+      
+      await Promise.all(imagePromises);
+    };
+
+    if (photos1.length > 0 || photos2.length > 0) {
+      preloadImages();
+    }
+  }, [photos1, photos2]);
 
   const nextSlide = (slider: number, maxSlides: number) => {
     if (slider === 1) {
@@ -108,6 +137,55 @@ const Project = ({ slide1, slide2, filter }: ProjectProps) => {
     return null;
   }
 
+  // Loading placeholder component
+  const ImageLoadingPlaceholder = ({ className }: { className: string }) => (
+    <div className={`${className} bg-gray-200 animate-pulse flex items-center justify-center`}>
+      <div className="text-gray-400">Loading...</div>
+    </div>
+  );
+
+  // Optimized image component with loading states
+  const OptimizedImage = ({ 
+    src, 
+    alt, 
+    className, 
+    priority = false 
+  }: { 
+    src: string; 
+    alt: string; 
+    className: string; 
+    priority?: boolean;
+  }) => {
+    const [imageError, setImageError] = useState(false);
+    const isLoaded = imagesLoaded.has(src);
+
+    if (imageError) {
+      return (
+        <div className={`${className} bg-gray-100 flex items-center justify-center`}>
+          <div className="text-gray-500">Image unavailable</div>
+        </div>
+      );
+    }
+
+    return (
+      <div className="relative w-full h-full">
+        {!isLoaded && <ImageLoadingPlaceholder className={className} />}
+        <Image
+          src={src}
+          alt={alt}
+          width={800} // Reduced from 1500 for faster loading
+          height={800} // Reduced from 1500 for faster loading
+          className={`${className} ${!isLoaded ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
+          priority={priority}
+          quality={85} // Slightly reduced quality for faster loading
+
+          onError={() => setImageError(true)}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
+      </div>
+    );
+  };
+
   return (
     <motion.div
       variants={containerVariants}
@@ -140,12 +218,11 @@ const Project = ({ slide1, slide2, filter }: ProjectProps) => {
                     transition={slideTransition}
                     className="w-full"
                   >
-                    <Image
+                    <OptimizedImage
                       src={photos1[currentSlide1]?.image || ''}
                       alt={slide1?.title || ''}
-                      width={1500}
-                      height={1500}
                       className="w-full h-64 sm:h-80 md:h-96 lg:h-124 object-cover rounded-tl-[20px] sm:rounded-tl-[40px] lg:rounded-tl-[60px] rounded-br-[20px] sm:rounded-br-[40px] lg:rounded-br-[60px]"
+                      priority={currentSlide1 === 0} // Prioritize first image
                     />
                   </motion.div>
                 </AnimatePresence>
@@ -259,12 +336,11 @@ const Project = ({ slide1, slide2, filter }: ProjectProps) => {
                     transition={slideTransition}
                     className="w-full"
                   >
-                    <Image
+                    <OptimizedImage
                       src={photos2[currentSlide2]?.image || ''}
                       alt={slide2?.title || ''}
-                      width={1500}
-                      height={1500}
                       className="w-full h-64 sm:h-80 md:h-96 lg:h-124 object-cover rounded-tr-[20px] sm:rounded-tr-[40px] lg:rounded-tr-[60px] rounded-bl-[20px] sm:rounded-bl-[40px] lg:rounded-bl-0"
+                      priority={currentSlide2 === 0} // Prioritize first image
                     />
                   </motion.div>
                 </AnimatePresence>
