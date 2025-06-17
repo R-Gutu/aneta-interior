@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Bricolage_Grotesque, Dancing_Script, Montserrat } from "next/font/google";
+import { Inter, Bricolage_Grotesque, Dancing_Script, Montserrat, Bree_Serif } from "next/font/google";
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { domAnimation, LazyMotion } from "motion/react";
@@ -26,6 +26,11 @@ const dancingScript = Dancing_Script({
   subsets: ['latin'],
   variable: '--font-dancing-script'
 })
+const breeSerif = Bree_Serif({
+  subsets: ['latin'],
+    weight: '400',
+  variable: '--font-bree-serif'
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -43,7 +48,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${bricolage.variable} ${montserrat.variable} ${dancingScript.variable} antialiased`}
+        className={`${inter.variable} ${bricolage.variable} ${montserrat.variable} ${dancingScript.variable} ${breeSerif.variable} antialiased`}
       >
         <LazyMotion features={domAnimation}>
           <NextIntlClientProvider>

@@ -1,6 +1,5 @@
 'use client'
 import { useRouter } from '@/i18n/navigation'
-import { link } from 'fs'
 import Image from 'next/image'
 
 const Services = () => {

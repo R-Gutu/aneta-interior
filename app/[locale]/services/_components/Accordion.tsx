@@ -61,6 +61,7 @@ const Accordion = ({
             }`}>
               {/* Image Section */}
               {imagePath && (
+<<<<<<< HEAD
                 <div className="w-full relative overflow-hidden rounded-bl-[60px] rounded-tr-[60px] sm:rounded-bl-[80px] sm:rounded-tr-[80px] lg:rounded-bl-[120px] lg:rounded-tr-[120px] group/image order-2 lg:order-1">
                   <div className="relative h-48 sm:h-64 lg:h-80 transition-transform duration-700 ease-out group-hover/image:scale-105">
                     <Image
@@ -68,6 +69,16 @@ const Accordion = ({
                       alt={title}
                       fill
                       className="object-cover transition-all duration-700 ease-out"
+=======
+                <div className="lg:w-1/3">
+                  <div className="relative">
+                    <Image
+                      src={imagePath} 
+                      alt={title}
+                      width={1200}
+                      height={1200}
+                      className="w-full h-48 object-cover rounded-2xl"
+>>>>>>> 1747bc5da656919e890cd29fefcef5f5d6700235
                     />
                     {/* Subtle overlay on hover */}
                     <div className="absolute inset-0 bg-black/0 group-hover/image:bg-black/5 transition-all duration-300"></div>

@@ -3,7 +3,7 @@
 import { useRouter } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
-import React, { useState } from 'react';
+
 
 export default function CEO() {
   const router = useRouter();
@@ -35,7 +35,7 @@ export default function CEO() {
             <span className="text-center">O viziune unică.</span>
           </h1>
         </div>
-        <div className={cn("flex items-center justify-end px-4", "max-xl:justify-end max-sm:justify-center")}>
+        <div className={cn("flex items-center justify-center px-4", "max-xl:justify-end max-sm:justify-center")}>
           <Image
             src="/images/ceo.png"
             alt="CEO"
