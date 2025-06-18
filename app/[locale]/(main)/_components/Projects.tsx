@@ -220,7 +220,7 @@ export default function Projects() {
                       </div>
 
                       {/* Arrow Icon - Top Right */}
-                      <div className="absolute top-3 sm:top-4 lg:top-6 right-3 sm:right-4 lg:right-6 w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 cursor-pointer shadow-2xl bg-white/90 backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center group-hover:bg-white hover:scale-105 transition-all duration-200">
+                      <div onClick={() => handlePush(`/projects`)} className="absolute top-3 sm:top-4 lg:top-6 right-3 sm:right-4 lg:right-6 w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 cursor-pointer shadow-2xl bg-white/90 backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center group-hover:bg-white hover:scale-105 transition-all duration-200">
                         <svg width="16" height="16" className="sm:w-5 sm:h-5 lg:w-6 lg:h-6" viewBox="0 0 16 16" fill="none">
                           <path 
                             d="M4 12L12 4M12 4H4M12 4V12" 
@@ -262,7 +262,7 @@ export default function Projects() {
                       </div>
 
                       {/* Arrow Icon - Top Right */}
-                      <div className="absolute top-3 sm:top-4 lg:top-6 right-3 sm:right-4 lg:right-6 w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 cursor-pointer shadow-2xl bg-white/90 backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center group-hover:bg-white hover:scale-105 transition-all duration-200">
+                      <div onClick={() => handlePush(`/projects`)} className="absolute top-3 sm:top-4 lg:top-6 right-3 sm:right-4 lg:right-6 w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 cursor-pointer shadow-2xl bg-white/90 backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center group-hover:bg-white hover:scale-105 transition-all duration-200">
                         <svg width="16" height="16" className="sm:w-5 sm:h-5 lg:w-6 lg:h-6" viewBox="0 0 16 16" fill="none">
                           <path 
                             d="M4 12L12 4M12 4H4M12 4V12" 
