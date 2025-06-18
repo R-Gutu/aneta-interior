@@ -230,5 +230,9 @@
       "camera_copii": "Kids Room"
     },
     "home": "Our Projects"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We love meeting new people and making your space special"
   }
 }

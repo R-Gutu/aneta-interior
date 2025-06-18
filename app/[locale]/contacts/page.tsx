@@ -1,8 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
 import FormElement from '../_components/FormElement'
+import { useTranslations } from 'next-intl'
 
 const page = () => {
+  const t = useTranslations('contact');
 
   const socials = [
     {
@@ -37,7 +39,7 @@ const page = () => {
       <div className="max-w-6xl mx-auto pt-[100px]">
         {/* Title */}
         <h1 className="text-4xl xs:text-6xl sm:text-7xl md:text-8xl font-bold text-gray-900 mb-8 text-center md:text-left font-bricolage">
-          Contactaţi-ne
+          {t('title')}
         </h1>
 
         {/* Main Content Grid */}
@@ -61,7 +63,7 @@ const page = () => {
               {/* Top Section - Title */}
               <div>
                 <h2 className="text-xl md:text-2xl font-semibold font-poppins mb-4 leading-tight">
-                  Ne place să întâlnim oameni noi și să le facem spațiul special
+                  {t('subtitle')}
                 </h2>
               </div>
 
