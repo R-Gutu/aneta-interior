@@ -97,7 +97,47 @@
     "view_project": "Vezi Proiectul",
     "previous_project": "Proiectul anterior",
     "next_project": "Proiectul următor",
-    "go_to_slide": "Mergi la diapozitivul {slide}"
+    "go_to_slide": "Mergi la diapozitivul {slide}",
+    "slide1": {
+    "title": "Liniște în tonuri de catifea",
+    "alt": "Imagine a unui design interior modern urban"
+  },
+  "slide2": {
+    "title": "Esențe calme",
+    "alt": "Imagine a unui design interior modern elegant"
+  },
+  "slide3": {
+    "title": "Ritm urban - Cluj",
+    "alt": "Imagine a unui design interior modern urban"
+  },
+  "slide4": {
+    "title": "Subtilitate Nordică",
+    "alt": "Imagine a unui design interior modern elegant"
+  },
+  "slide5": {
+    "title": "Calm texturat",
+    "alt": "Imagine a unui design interior modern urban"
+  },
+  "slide6": {
+    "title": "Contrast delicat",
+    "alt": "Imagine a unui design interior modern elegant"
+  },
+  "slide7": {
+    "title": "Dialog în texturii faine",
+    "alt": "Imagine a unui design interior modern urban"
+  },
+  "slide8": {
+    "title": "Liniște de tonuri în catifea",
+    "alt": "Imagine a unui design interior modern elegant"
+  },
+  "slide9": {
+    "title": "Contrast delicat",
+    "alt": "Imagine a unui design interior modern urban"
+  },
+  "slide10": {
+    "title": "Tonuri de calm",
+    "alt": "Imagine a unui design interior modern elegant"
+  }
   },
   "services": {
     "title": "Servicii",

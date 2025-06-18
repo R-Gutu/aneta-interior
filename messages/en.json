@@ -97,7 +97,47 @@
     "view_project": "View Project",
     "previous_project": "Previous project",
     "next_project": "Next project",
-    "go_to_slide": "Go to slide {slide}"
+    "go_to_slide": "Go to slide {slide}",
+    "slide1": {
+    "title": "Calm Textures",
+    "alt": "Image of modern urban interior design"
+  },
+  "slide2": {
+    "title": "Urban calm",
+    "alt": "Image of modern and minimalist interior design"
+  },
+  "slide3": {
+    "title": "Urban",
+    "alt": "Image of elegant modern interior design"
+  },
+  "slide4": {
+    "title": "Nordic subtle",
+    "alt": "Image of modern and minimalist interior design"
+  },
+  "slide5": {
+    "title": "Calm Texturat",
+    "alt": "Image of modern elegant and luxury interior design"
+  },
+  "slide6": {
+    "title": "Delicately",
+    "alt": "Image of modern and minimalist interior design"
+  },
+   "slide7": {
+    "title": "Dialogue",
+    "alt": "Image of luxury interior design"
+  },
+  "slide8": {
+    "title": "Lines on",
+    "alt": "Image of modern and minimalist interior design"
+  },
+  "slide9": {
+    "title": "Contrast",
+    "alt": "Image of modern elegant and luxury interior design"
+  },
+  "slide10": {
+    "title": "Calm,Tonuri",
+    "alt": "Image of modern and minimalist interior design"
+  }
   },
   "services": {
     "title": "Services",
