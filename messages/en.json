@@ -1,0 +1,234 @@
+{
+    "header": {
+    "logoAlt": "logo",
+    "burgerAlt": "burger",
+    "closeAlt": "close menu",
+        "nav": {
+            "about": "About us",
+            "services": "Services",
+            "proiecte": "Projects",
+            "contacte": "Contacts"
+        }
+    },
+    "footer": {
+  "logoAlt": "Aneta Design Interior Logo",
+  "followUs": "Follow us on",
+  "contactHeading": "CONTACTS",
+  "phoneLabel": "PHONE:",
+  "addressLabel": "ADDRESS:",
+  "addressLine1": "Romania, Bucharest municipality,",
+  "addressLine2": "Splaiul Independentei street, 202 B",
+  "navLabel": "Navigation",
+  "languageSelectLabel": "Languages",
+  "languageRO": "RO",
+  "languageRU": "RU",
+  "copyright": "© 2025 Aneta Design Interior. All rights reserved.",
+  "createdBy": "Created by",
+  "nav": {
+    "about": "About us",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact"
+  }
+},
+"contactForm": {
+  "title": "Creative Project?",
+  "subtitle": "Let's have a productive discussion.",
+  "fullNameLabel": "Full Name",
+  "fullNamePlaceholder": "Enter your name",
+  "emailLabel": "Email",
+  "emailPlaceholder": "Enter your email address",
+  "servicesLabel": "Select the services you need:",
+  "services": {
+    "render3d": "3D Rendering",
+    "designMobilier": "Custom Furniture Design",
+    "pachetPlus": "Plus Package",
+    "designExterior": "Exterior Design (facades, terraces, courtyards)",
+    "implementare": "Implementation",
+    "consultanta": "Interior Design Consultation"
+  },
+  "messageLabel": "Your Message",
+  "messagePlaceholder": "Describe your project, objectives, and priorities...",
+  "submitButton": "Send Message",
+  "submitButtonSending": "Sending...",
+  "successMessage": "Message sent successfully!",
+  "errorMessage": "An error occurred. Please try again."
+},
+"ceo": {
+    "title": "CEO",
+    "subtitle": "Interior Designer",
+    "name": "Ana Jantovan-Șum",
+    "see_services": "See services",
+    "arrow_alt": "arrow",
+    "hero_title": "One name.",
+    "hero_subtitle": "A unique vision.",
+    "image_alt": "CEO",
+    "contact_bg_alt": "Contact background",
+    "cta_title": "Let's create interiors that inspire and are remembered.",
+    "contact_us": "Contact us"
+  },
+  "hero": {
+    "bg_alt": "Hero Image",
+    "title": "We create inspiring interiors",
+    "description": "Your ideas are our foundation to build unique spaces. Discover how we make dreams come true.",
+    "about_us": "Learn about us",
+    "arrow_alt": "arrow"
+  },
+  "partners": {
+    "title": "Our Partners",
+    "eglo_alt": "EGLO lighting partner",
+    "tandem_alt": "TANDEM design partner",
+    "lustre_alt": "Lustre.ro lighting partner",
+    "mobexpert_alt": "MOBEXPERT furniture partner",
+    "vioni_alt": "Vioni design partner",
+    "elves_alt": "Elves design partner",
+    "years_on_market": "years on the market",
+    "projects_done": "projects completed",
+    "eu_projects": "projects in the EU",
+    "happy_clients": "satisfied clients"
+  },
+  "main-projects": {
+    "title": "Our Projects",
+    "subtitle": "More than beautiful – functional and personal",
+    "chic_urban_title": "CHIC URBAN CLUJ-NAPOCA",
+    "modern_urban_alt": "Modern urban interior design project",
+    "eleganta_moderna_title": "Modern Elegance BUCHAREST",
+    "elegant_modern_alt": "Elegant modern interior design project",
+    "view_project": "View Project",
+    "previous_project": "Previous project",
+    "next_project": "Next project",
+    "go_to_slide": "Go to slide {slide}",
+    "slide1": {
+    "title": "Calm Textures",
+    "alt": "Image of modern urban interior design"
+  },
+  "slide2": {
+    "title": "Urban calm",
+    "alt": "Image of modern and minimalist interior design"
+  },
+  "slide3": {
+    "title": "Urban",
+    "alt": "Image of elegant modern interior design"
+  },
+  "slide4": {
+    "title": "Nordic subtle",
+    "alt": "Image of modern and minimalist interior design"
+  },
+  "slide5": {
+    "title": "Calm Texturat",
+    "alt": "Image of modern elegant and luxury interior design"
+  },
+  "slide6": {
+    "title": "Delicately",
+    "alt": "Image of modern and minimalist interior design"
+  },
+   "slide7": {
+    "title": "Dialogue",
+    "alt": "Image of luxury interior design"
+  },
+  "slide8": {
+    "title": "Lines on",
+    "alt": "Image of modern and minimalist interior design"
+  },
+  "slide9": {
+    "title": "Contrast",
+    "alt": "Image of modern elegant and luxury interior design"
+  },
+  "slide10": {
+    "title": "Calm,Tonuri",
+    "alt": "Image of modern and minimalist interior design"
+  }
+  },
+  "services": {
+    "title": "Services",
+    "design3d_alt": "3D Design Services Image",
+    "design3d_title": "3D Design",
+    "design3d_description": "Visualization & Concept",
+    "design_avansat_alt": "Advanced Design Services Image",
+    "design_avansat_title": "ADVANCED DESIGN",
+    "design_avansat_description": "Complete Design Project",
+    "design_all_inclusive_alt": "All-Inclusive Design Services Image",
+    "design_all_inclusive_title": "ALL-INCLUSIVE DESIGN",
+    "design_all_inclusive_description": "Project + Implementation",
+    "see_services_button": "See services",
+    "arrow_alt": "Arrow icon"
+  },
+  "about": {
+    "title": "About Ana Jantovan-Șum",
+    "ana_image_alt": "Ana Jantovan-Șum",
+    "paragraph1": "I'm Ana Jantovan Șum, founder and CEO of Aneta Interior - a studio born from a passion for harmony, details, and spaces that tell stories.",
+    "paragraph2": "For me, interior design is not just about aesthetics, but a way to bring balance to people's lives. I believe in the power of textures, natural light, and clean lines. I like to create interiors that breathe - spaces in which to find yourself, to calm down, to feel at home.",
+    "paragraph3": "My style gravitates around warm minimalism, with elegant accents, natural materials, and carefully thought-out proportions. I have a weakness for subtle contrasts, neutral whites, natural wood, and marble. I'm inspired by architecture, places, people - but also by tranquility.",
+    "paragraph4": "On Instagram and Facebook, I document the journey of each project: from ideas and mood boards to the final details that give life to a space.",
+    "paragraph5": "Behind every concept there is a lot of work, but above all listening. Because true design begins with the question: What do you really want to feel when you get home?",
+    "experience_label": "Years of experience",
+    "projects_label": "Projects completed"
+  },
+  "aboutHero": {
+    "title": "ANETA",
+    "interior_span": "INTERIOR",
+    "description_part1": "Our team with many years of experience in interior design has successfully implemented projects for clients in various fields. We pride ourselves on our creativity, ability to find innovative solutions, and attention to detail.",
+    "description_part2": "Each project is a close collaboration between the client and our team, ensuring that your unique and personalized vision is realized.",
+    "image_alt": "About Hero",
+    "bottom_description": "Modern style with warm tones and natural accents. A bright, balanced, and comfortable space, ideal for daily relaxation.",
+    "our_projects": "Our projects",
+    "arrow_alt": "arrow"
+  },
+  "interiorShowcase": {
+    "main_title": "Carefully considered urban interior",
+    "cluj_interior_alt": "Cluj Chic Interior Design",
+    "cluj": "Cluj",
+    "chic": "Chic",
+    "accent_image_alt": "interior",
+    "cluj_description_bold": "Modern and Comfortable Interior Design with Urban Chic Elements.",
+    "cluj_description": "This space combines contemporary elegance with urban elements through a warm finish of elegant details. The space combines the natural form, neutral tones, and golden accents to create a sophisticated and welcoming ambiance.",
+    "arrow_alt": "Arrow",
+    "urban": "Urban",
+    "harmony": "Harmony",
+    "harmony_description": "The design emphasizes clean lines, optimized functionality, and a relaxing color palette. The minimalist furniture and discreet details create a perfect balance between utility and style.",
+    "urban_interior_alt": "Urban Harmony Interior Design"
+  },
+  "face": {
+    "services_left_alt": "Services Left",
+    "discover_h1": "Discover our interior design services, tailored to your needs.",
+    "discover_h2": "From 3D renderings to complete implementation.",
+    "services_bottom_alt": "Services Bottom"
+  },
+  "ourServices": {
+    "title": "Our Services",
+    "description": "We offer a comprehensive range of web design and development services, tailored to your business's specific needs. From creative concepts to advanced technical implementations, our team helps you transform your ideas into digital reality.",
+    "design3d_title": "3D Web Design",
+    "design3d_description": "We create interactive and captivating web experiences with modern 3D elements. Using cutting-edge technologies, we develop websites that stand out through innovative design and advanced functionality, providing users with a unique and memorable experience.",
+    "design_avansat_title": "Advanced Web Design",
+    "design_avansat_description": "We develop complex and customized web solutions, adapted to your business's specific requirements. From interactive web applications to advanced e-commerce platforms, we implement the latest technologies to give you a competitive advantage in the market.",
+    "design_all_inclusive_title": "Complete Design Package",
+    "design_all_inclusive_description": "The complete solution for your online presence - from concept and design to development, SEO optimization, and maintenance. We include everything: responsive design, search engine optimization, social media integration, and continuous technical support."
+  },
+  "common": {
+    "viewExamples": "View Examples"
+  },
+  "steps": {
+    "title": "Project Stages",
+    "description": "The process of creating a unique design, going through key stages from concept to complete implementation, ensures high quality and attention to detail at every step.",
+    "concept_title": "Concept Creation",
+    "concept_description": "We begin with developing a unique concept that will highlight your individual characteristics and make your project stand out among others.",
+    "space_design_title": "Space Design",
+    "space_design_description": "The next step is creating a detailed 2D plan that illustrates the functionality and optimal flow of the space.",
+    "modeling_3d_title": "3D Modeling",
+    "modeling_3d_description": "At this stage, we bring the concept to life through 3D rendering, so you can see all the details and proportions of your future space.",
+    "execution_details_title": "Execution Details",
+    "execution_details_description": "We carefully develop all technical specifications to ensure that every element of your project is executed with the highest precision.",
+    "materials_selection_title": "Materials & Furniture Selection",
+    "materials_selection_description": "We select materials and finishes that perfectly match your project's concept and budget, to create a harmonious and elegant space."
+  },
+  "projects": {
+    "filters": {
+      "living": "Living Room",
+      "bucatarie": "Kitchen",
+      "dormitor": "Bedroom",
+      "baie": "Bathroom",
+      "camera_copii": "Kids Room"
+    },
+    "home": "Our Projects"
+  }
+}

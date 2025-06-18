@@ -18,15 +18,15 @@ const Project = ({ slide1, slide2, filter }: ProjectProps) => {
   // Helper function to get photos based on filter
   const getPhotosForFilter = (project: ProjectType, filter: FilterType): Photo[] => {
     switch (filter) {
-      case 'Living':
+      case 'living':
         return project.living || [];
-      case 'Bucătărie':
+      case 'bucatarie':
         return project.kitchen || [];
-      case 'Dormitor':
+      case 'dormitor':
         return project.bedroom || [];
-      case 'Baie':
+      case 'baie':
         return project.bathroom || [];
-      case 'Cameră pentru copii':
+      case 'camera_copii':
         return project.bedroom_children || [];
       default:
         return [];
@@ -173,11 +173,11 @@ const Project = ({ slide1, slide2, filter }: ProjectProps) => {
         <Image
           src={src}
           alt={alt}
-          width={800} // Reduced from 1500 for faster loading
-          height={800} // Reduced from 1500 for faster loading
+          width={800}
+          height={800}
           className={`${className} ${!isLoaded ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
           priority={priority}
-          quality={85} // Slightly reduced quality for faster loading
+          quality={85}
 
           onError={() => setImageError(true)}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

@@ -1,21 +1,23 @@
 import React, { useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 const Accordion = ({ 
-  title, 
+  titleKey, 
   imagePath, 
-  content, 
+  contentKey, 
   link, 
   defaultOpen = false 
 }:{
-    title: string,
+    titleKey: string,
     imagePath: string,
-    content: string,
+    contentKey: string,
     link: string,
     defaultOpen?: boolean
 }) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
+  const t = useTranslations();
 
   const toggleItem = () => {
     setIsOpen(!isOpen);
@@ -29,7 +31,7 @@ const Accordion = ({
         className="w-full p-4 sm:p-6 flex items-center justify-between text-left hover:bg-gray-100 transition-all duration-300 group"
       >
         <p className="font-bricolage text-lg sm:text-xl md:text-2xl font-bold text-[#383838] pr-3 sm:pr-4 transition-colors group-hover:text-[#191A23] leading-tight">
-          {title}
+          {t(titleKey)}
         </p>
         <div className="flex-shrink-0 relative">
           {/* Animated Plus/Minus Icon */}
@@ -65,7 +67,7 @@ const Accordion = ({
                   <div className="relative h-48 sm:h-64 lg:h-80 transition-transform duration-700 ease-out group-hover/image:scale-105">
                     <Image
                       src={imagePath} 
-                      alt={title}
+                      alt={t(titleKey)}
                       fill
                       className="object-cover transition-all duration-700 ease-out"
                     />
@@ -84,7 +86,7 @@ const Accordion = ({
                 <div className="space-y-3 sm:space-y-4">
                   {/* Content */}
                   <div className="text-[#383838] font-medium sm:font-semibold text-sm sm:text-base leading-relaxed whitespace-pre-line">
-                    {content}
+                    {t(contentKey)}
                   </div>
                   
                   {/* Link Button */}
@@ -95,7 +97,7 @@ const Accordion = ({
                         className="inline-flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-white rounded-lg transition-all duration-300 font-medium text-sm sm:text-base shadow-lg hover:shadow-xl hover:shadow-black/20 hover:scale-105 hover:bg-gray-50 active:scale-95 group/link"
                       >
                         <span className="transition-transform duration-300 group-hover/link:translate-x-1">
-                          Vezi exemple
+                          {t('common.viewExamples')}
                         </span>
                         <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 group-hover/link:translate-x-1 group-hover/link:-translate-y-1" />
                       </a>

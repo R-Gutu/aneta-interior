@@ -9,5 +9,226 @@
     "proiecte": "Proiecte",
     "contacte": "Contacte"
   }
-}
+},
+"footer": {
+  "logoAlt": "Aneta Design Interior Logo",
+  "followUs": "Urmărește-ne pe",
+  "contactHeading": "CONTACTE",
+  "phoneLabel": "TELEFON:",
+  "addressLabel": "ADRESA:",
+  "addressLine1": "România, mun. București,",
+  "addressLine2": "str. Splaiul Independenței, 202 B",
+  "navLabel": "Navigare",
+  "languageSelectLabel": "Limbi",
+  "languageRO": "RO",
+  "languageRU": "RU",
+  "copyright": "© 2025 Aneta Design Interior. Toate drepturile rezervate.",
+  "createdBy": "Creat de",
+  "nav": {
+    "about": "Despre noi",
+    "services": "Servicii",
+    "projects": "Proiecte",
+    "contact": "Contact"
+  }
+},
+"contactForm": {
+  "title": "Proiect creativ?",
+  "subtitle": "Să avem o discuție productivă.",
+  "fullNameLabel": "Nume complet",
+  "fullNamePlaceholder": "Introdu numele tău",
+  "emailLabel": "Email",
+  "emailPlaceholder": "Introdu adresa de email",
+  "servicesLabel": "Selectează serviciile de care ai nevoie:",
+  "services": {
+    "render3d": "Render 3D",
+    "designMobilier": "Design mobilier personalizat",
+    "pachetPlus": "Pachet Plus",
+    "designExterior": "Design de exterior (fațade, terase, curți)",
+    "implementare": "Implementare",
+    "consultanta": "Consultanță design interior"
+  },
+  "messageLabel": "Mesajul tău",
+  "messagePlaceholder": "Descrie proiectul, obiectivele și prioritățile tale...",
+  "submitButton": "Trimite mesajul",
+  "submitButtonSending": "Se trimite...",
+  "successMessage": "Mesajul a fost trimis cu succes!",
+  "errorMessage": "A apărut o eroare. Te rugăm să încerci din nou."
+},
+"ceo": {
+    "title": "CEO",
+    "subtitle": "Designer interior",
+    "name": "Ana Jantovan-Șum",
+    "see_services": "Vezi serviciile",
+    "arrow_alt": "săgeată",
+    "hero_title": "Un singur nume.",
+    "hero_subtitle": "O viziune unică.",
+    "image_alt": "CEO",
+    "contact_bg_alt": "Fundal contact",
+    "cta_title": "Hai să creăm interioare care inspiră și rămân în memorie.",
+    "contact_us": "Contactează-ne"
+  },
+  "hero": {
+    "bg_alt": "Imagine Erou",
+    "title": "Creăm interioare inspirate",
+    "description": "Ideile tale sunt baza noastră pentru a crea spații unice. Aflați cum facem visele să devină realitate",
+    "about_us": "Află despre noi",
+    "arrow_alt": "săgeată"
+  },
+  "partners": {
+    "title": "Partenerii noștri",
+    "eglo_alt": "Partener de iluminat EGLO",
+    "tandem_alt": "Partener de design TANDEM",
+    "lustre_alt": "Partener de iluminat Lustre.ro",
+    "mobexpert_alt": "Partener de mobilă MOBEXPERT",
+    "vioni_alt": "Partener de design Vioni",
+    "elves_alt": "Partener de design Elves",
+    "years_on_market": "ani pe piață",
+    "projects_done": "proiecte realizate",
+    "eu_projects": "proiecte în UE",
+    "happy_clients": "clienți mulțumiți"
+  },
+  "main-projects": {
+    "title": "Proiectele noastre",
+    "subtitle": "Mai mult decât frumos – funcțional și personal",
+    "chic_urban_title": "CHIC URBAN CLUJ-NAPOCA",
+    "modern_urban_alt": "Proiect de design interior urban modern",
+    "eleganta_moderna_title": "Eleganță Modernă BUCUREȘTI",
+    "elegant_modern_alt": "Proiect de design interior modern elegant",
+    "view_project": "Vezi Proiectul",
+    "previous_project": "Proiectul anterior",
+    "next_project": "Proiectul următor",
+    "go_to_slide": "Mergi la diapozitivul {slide}",
+    "slide1": {
+    "title": "Liniște în tonuri de catifea",
+    "alt": "Imagine a unui design interior modern urban"
+  },
+  "slide2": {
+    "title": "Esențe calme",
+    "alt": "Imagine a unui design interior modern elegant"
+  },
+  "slide3": {
+    "title": "Ritm urban - Cluj",
+    "alt": "Imagine a unui design interior modern urban"
+  },
+  "slide4": {
+    "title": "Subtilitate Nordică",
+    "alt": "Imagine a unui design interior modern elegant"
+  },
+  "slide5": {
+    "title": "Calm texturat",
+    "alt": "Imagine a unui design interior modern urban"
+  },
+  "slide6": {
+    "title": "Contrast delicat",
+    "alt": "Imagine a unui design interior modern elegant"
+  },
+  "slide7": {
+    "title": "Dialog în texturii faine",
+    "alt": "Imagine a unui design interior modern urban"
+  },
+  "slide8": {
+    "title": "Liniște de tonuri în catifea",
+    "alt": "Imagine a unui design interior modern elegant"
+  },
+  "slide9": {
+    "title": "Contrast delicat",
+    "alt": "Imagine a unui design interior modern urban"
+  },
+  "slide10": {
+    "title": "Tonuri de calm",
+    "alt": "Imagine a unui design interior modern elegant"
+  }
+  },
+  "services": {
+    "title": "Servicii",
+    "design3d_alt": "Imagine Servicii Design 3D",
+    "design3d_title": "Design 3D",
+    "design3d_description": "Vizualizare & Concept",
+    "design_avansat_alt": "Imagine Servicii Design Avansat",
+    "design_avansat_title": "DESIGN AVANSAT",
+    "design_avansat_description": "Proiect Complet de Amenajare",
+    "design_all_inclusive_alt": "Imagine Servicii Design All-Inclusive",
+    "design_all_inclusive_title": "DESIGN ALL-INCLUSIVE",
+    "design_all_inclusive_description": "Proiect + Implementare",
+    "see_services_button": "Vezi serviciile",
+    "arrow_alt": "Iconiță săgeată"
+  },
+  "about": {
+    "title": "Despre Ana Jantovan-Șum",
+    "ana_image_alt": "Ana Jantovan-Șum",
+    "paragraph1": "Sunt Ana Jantovan Șum și sunt fondatoarea, și CEO-ul Aneta Interior - un studio născut din pasiunea pentru armonie, detalii și spații care spun povești.",
+    "paragraph2": "Pentru mine, designul interior nu înseamnă doar estetică, ci un mod de a aduce echilibru în viața oamenilor. Cred în puterea texturilor, a luminii naturale și a liniilor curate. Îmi place să creez interioare care respiră - spații în care să te regăsești, să te liniștești, să te simți tu.",
+    "paragraph3": "Stilul meu gravitează în jurul minimalismului cald, cu accente elegante, materiale naturale și proporții gândite cu grijă. Am o slăbiciune pentru contraste subtile, alburi neutre, lemn natur și marmură. Mă inspir din arhitectură, din locuri, din oameni - dar și din liniște.",
+    "paragraph4": "Pe Instagram și Facebook documentez parcursul fiecărui proiect: de la idei și planșe de moodboard, până la detaliile finale care dau viață unui spațiu.",
+    "paragraph5": "În spatele fiecărui concept e multă muncă, dar mai ales ascultare. Pentru că designul adevărat începe cu întrebarea: Ce îți dorești cu adevărat să simți când ajungi acasă?",
+    "experience_label": "Experiență ani",
+    "projects_label": "Proiecte realizate"
+  },
+  "aboutHero": {
+    "title": "ANETA",
+    "interior_span": "INTERIOR",
+    "description_part1": "Echipa noastra cu multi ani de experienta in domeniul designului interior a implementat cu succes proiecte pentru clienti din diverse domenii. Ne mândrim cu creativitatea noastră, capacitatea de a găsi soluții inovatoare și atenția la detalii.",
+    "description_part2": "Fiecare proiect este o colaborare strânsă între client și echipa noastră, asigurând că viziunea dumneavoastră unică și personalizată este realizată.",
+    "image_alt": "Despre Erou",
+    "bottom_description": "Stil modern cu tonuri calde și accente naturale. Un spațiu luminos, echilibrat și confortabil, ideal pentru relaxare zilnică.",
+    "our_projects": "Proiectele noastre",
+    "arrow_alt": "săgeată"
+  },
+  "interiorShowcase": {
+    "main_title": "Interior urban, gândit cu grijă",
+    "cluj_interior_alt": "Design interior Chic Cluj",
+    "cluj": "Cluj",
+    "chic": "Chic",
+    "accent_image_alt": "interior",
+    "cluj_description_bold": "Design Interior Modern și Confortabil cu Elemente de Chic Urban.",
+    "cluj_description": "Acest spațiu îmbină eleganța contemporană cu elemente urbane printr-o finisare caldă de detalii elegante. Spațiul combină forma naturală, tonurile neutre și accentele aurii pentru a crea un ambient sofisticat și primitor.",
+    "arrow_alt": "Săgeată",
+    "urban": "Urban",
+    "harmony": "Harmonie",
+    "harmony_description": "Designul pune accent pe liniile clare, funcționalitatea optimizată și o paletă cromatică relaxantă. Mobilierul minimalist și detaliile discrete creează un echilibru perfect între utilitate și stil.",
+    "urban_interior_alt": "Design interior Armonie Urbană"
+  },
+  "face": {
+    "services_left_alt": "Servicii Stânga",
+    "discover_h1": "Descoperă serviciile noastre de design interior, adaptate nevoilor tale.",
+    "discover_h2": "De la randări 3D până la implementare completă.",
+    "services_bottom_alt": "Servicii Jos"
+  },
+  "ourServices": {
+    "title": "Serviciile Noastre",
+    "description": "Oferim o gamă completă de servicii de design și dezvoltare web, adaptate nevoilor specifice ale afacerii dumneavoastră. De la concepte creative la implementări tehnice avansate, echipa noastră vă ajută să vă transformați ideile în realitate digitală.",
+    "design3d_title": "Design Web 3D",
+    "design3d_description": "Creăm experiențe web interactive și captivante cu elemente 3D moderne. Folosim tehnologii de ultimă generație pentru a dezvolta site-uri web care se remarcă prin design inovator și funcționalitate avansată, oferind utilizatorilor o experiență unică și memorabilă.",
+    "design_avansat_title": "Design Web Avansat",
+    "design_avansat_description": "Dezvoltăm soluții web complexe și personalizate, adaptate cerințelor specifice ale afacerii dumneavoastră. De la aplicații web interactive la platforme e-commerce avansate, implementăm cele mai noi tehnologii pentru a vă oferi un avantaj competitiv pe piață.",
+    "design_all_inclusive_title": "Pachet Design Complet",
+    "design_all_inclusive_description": "Soluția completă pentru prezența dumneavoastră online - de la concept și design până la dezvoltare, optimizare SEO și întreținere. Includem totul: design responsiv, optimizare pentru motoarele de căutare, integrare cu rețelele sociale și suport tehnic continuu."
+  },
+  "common": {
+    "viewExamples": "Vezi exemple"
+  },
+  "steps": {
+    "title": "Etapele Proiectului",
+    "description": "Procesul de creare a unui design unic, trecând prin etapele cheie de la concept la implementarea completă, asigură calitate înaltă și atenție la detalii în fiecare etapă.",
+    "concept_title": "Crearea Conceptului",
+    "concept_description": "Începem cu dezvoltarea unui concept unic, care va sublinia caracteristicile dvs. individuale și va evidenția proiectul dvs. în rândul altora.",
+    "space_design_title": "Proiectarea Spațiului",
+    "space_design_description": "Următorul pas este crearea unui plan 2D detaliat, care ilustrează funcționalitatea și fluxul optim al spațiului.",
+    "modeling_3d_title": "Modelare 3D",
+    "modeling_3d_description": "În această etapă, aducem conceptul la viață printr-un randament 3D, astfel încât să puteți vedea toate detaliile și proporțiile viitorului dvs. spațiu.",
+    "execution_details_title": "Detaliile Execuției",
+    "execution_details_description": "Dezvoltăm cu atenție toate specificațiile tehnice pentru a ne asigura că fiecare element al proiectului dvs. este realizat cu cea mai mare precizie.",
+    "materials_selection_title": "Selecție materiale și mobilier",
+    "materials_selection_description": "Selectăm materiale și finisaje care se potrivesc perfect conceptului și bugetului proiectului dvs., pentru a crea un spațiu armonios și elegant."
+  },
+  "projects": {
+    "filters": {
+      "living": "Living",
+      "bucatarie": "Bucătărie",
+      "dormitor": "Dormitor",
+      "baie": "Baie",
+      "camera_copii": "Cameră pentru copii"
+    },
+    "home": "Proiectele noastre"
+  }
 }

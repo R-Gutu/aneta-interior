@@ -1,67 +1,120 @@
 'use client';
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { useTranslations } from 'next-intl';
 import { useRouter } from "@/i18n/navigation";
 
 export default function Projects() {
+  const t = useTranslations("main-projects");
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoScrollPaused, setIsAutoScrollPaused] = useState(false);
+  const intervalRef = useRef<number | null>(null);
 
-      const router = useRouter()
-      const handlePush = (link: string) => {
-          try {
-              router.push(link);
-          } catch (error) {
-              console.error('Navigation error:', error);
-          }
-      }
+  const router = useRouter()
+        const handlePush = (link: string) => {
+            try {
+                router.push(link);
+            } catch (error) {
+                console.error('Navigation error:', error);
+            }
+        }
+
   const projects = [
     {
       id: 1,
-      title: "CHIC URBAN CLUJ-NAPOCA",
+      title: t("slide1.title"),
       image: "/images/projects1.png",
-      alt: "Modern urban interior design project"
+      alt: t('slide1.alt')
     },
     {
       id: 2,
-      title: "Eleganță Modernă BUCUREȘTI",
+      title: t("slide2.title"),
       image: "/images/projects2.png",
-      alt: "Elegant modern interior design project"
+      alt: t('slide2.alt')
     },
     {
       id: 3,
-      title: "CHIC URBAN CLUJ-NAPOCA",
-      image: "/images/projects1.png",
-      alt: "Modern urban interior design project"
+      title: t("slide3.title"),
+      image: "/images/projects3.png",
+      alt: t('slide3.alt')
     },
     {
       id: 4,
-      title: "Eleganță Modernă BUCUREȘTI",
-      image: "/images/projects2.png",
-      alt: "Elegant modern interior design project"
+      title:  t("slide4.title"),
+      image: "/images/projects4.png",
+      alt: t('slide4.alt')
     },
     {
       id: 5,
-      title: "CHIC URBAN CLUJ-NAPOCA",
-      image: "/images/projects1.png",
-      alt: "Modern urban interior design project"
+      title: t("slide5.title"),
+      image: "/images/projects5.png",
+      alt: t('slide5.alt')
     },
     {
       id: 6,
-      title: "Eleganță Modernă BUCUREȘTI",
-      image: "/images/projects2.png",
-      alt: "Elegant modern interior design project"
+      title:  t("slide6.title"),
+      image: "/images/projects6.png",
+      alt: t('slide6.alt')
+    },
+    {
+      id: 7,
+      title: t("slide7.title"),
+      image: "/images/projects7.png",
+      alt: t('slide7.alt')
+    },
+    {
+      id: 8,
+      title:  t("slide8.title"),
+      image: "/images/projects8.png",
+      alt: t('slide8.alt')
+    },
+    {
+      id: 9,
+      title: t("slide9.title"),
+      image: "/images/projects9.png",
+      alt: t('slide9.alt')
+    },
+    {
+      id: 10,
+      title:  t("slide10.title"),
+      image: "/images/projects10.png",
+      alt: t('slide10.alt')
     },
   ];
 
+  // Auto-scroll functionality
+  useEffect(() => {
+    if (!isAutoScrollPaused) {
+      intervalRef.current = window.setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % projects.length);
+      }, 2000); // 2 seconds
+    }
+
+    return () => {
+      if (intervalRef.current) {
+        window.clearInterval(intervalRef.current);
+      }
+    };
+  }, [isAutoScrollPaused, projects.length]);
+
+  // Pause autoscroll when user interacts
+  const pauseAutoScroll = () => {
+    setIsAutoScrollPaused(true);
+    setTimeout(() => setIsAutoScrollPaused(false), 5000); // Resume after 5 seconds
+  };
+
   const nextSlide = () => {
+    pauseAutoScroll();
     setCurrentSlide((prev) => (prev + 1) % projects.length);
   };
 
   const prevSlide = () => {
+    pauseAutoScroll();
     setCurrentSlide((prev) => (prev - 1 + projects.length) % projects.length);
   };
 
   const goToSlide = (index: number) => {
+    pauseAutoScroll();
     setCurrentSlide(index);
   };
 
@@ -72,10 +125,10 @@ export default function Projects() {
         <div className="flex flex-col gap-4 sm:gap-6 mb-8 sm:mb-12">
           <div className="mb-4 sm:mb-6 md:mb-0">
             <p className="text-sm sm:text-base text-black mb-2 font-semibold font-bricolage px-4 sm:px-6 lg:px-8 py-2 sm:py-3 bg-white text-center w-fit rounded-xl">
-              Proiectele noastre
+              {t('title')}
             </p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black leading-tight max-w-xs sm:max-w-lg lg:max-w-xl">
-              Mai mult decât frumos – funcțional și personal
+              {t('subtitle')}
             </h2>
           </div>
 
@@ -87,7 +140,7 @@ export default function Projects() {
               <button
                 onClick={prevSlide}
                 className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-gray-300 cursor-pointer flex items-center justify-center hover:border-gray-400 hover:bg-white transition-all duration-200"
-                aria-label="Previous project"
+                aria-label={t('previous_project')}
               >
                 <svg width="14" height="14" className="sm:w-4 sm:h-4" viewBox="0 0 16 16" fill="none">
                   <path 
@@ -110,7 +163,7 @@ export default function Projects() {
               <button
                 onClick={nextSlide}
                 className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 cursor-pointer border-gray-300 flex items-center justify-center hover:border-gray-400 hover:bg-white transition-all duration-200"
-                aria-label="Next project"
+                aria-label={t('next_project')}
               >
                 <svg width="14" height="14" className="sm:w-4 sm:h-4" viewBox="0 0 16 16" fill="none">
                   <path 
@@ -127,7 +180,11 @@ export default function Projects() {
         </div>
 
         {/* Slider Container */}
-        <div className="relative overflow-hidden">
+        <div 
+          className="relative overflow-hidden"
+          onMouseEnter={() => setIsAutoScrollPaused(true)}
+          onMouseLeave={() => setIsAutoScrollPaused(false)}
+        >
           <div 
             className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -158,12 +215,12 @@ export default function Projects() {
                         
                         {/* View Project Button */}
                         <button onClick={() => handlePush(`/projects`)} className="flex items-center justify-center cursor-pointer gap-2 bg-white backdrop-blur-sm text-black px-4 sm:px-6 lg:px-10 py-2 sm:py-2.5 lg:py-3 rounded-lg sm:rounded-xl text-sm sm:text-base lg:text-lg font-semibold hover:bg-white hover:scale-105 transition-all duration-200">
-                          <span>Vezi Proiectul</span>
+                          <span>{t('view_project')}</span>
                         </button>
                       </div>
 
                       {/* Arrow Icon - Top Right */}
-                      <div className="absolute top-3 sm:top-4 lg:top-6 right-3 sm:right-4 lg:right-6 w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 cursor-pointer shadow-2xl bg-white/90 backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center group-hover:bg-white hover:scale-105 transition-all duration-200">
+                      <div onClick={() => handlePush(`/projects`)} className="absolute top-3 sm:top-4 lg:top-6 right-3 sm:right-4 lg:right-6 w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 cursor-pointer shadow-2xl bg-white/90 backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center group-hover:bg-white hover:scale-105 transition-all duration-200">
                         <svg width="16" height="16" className="sm:w-5 sm:h-5 lg:w-6 lg:h-6" viewBox="0 0 16 16" fill="none">
                           <path 
                             d="M4 12L12 4M12 4H4M12 4V12" 
@@ -200,12 +257,12 @@ export default function Projects() {
                         
                         {/* View Project Button */}
                         <button onClick={() => handlePush(`/projects`)} className="flex items-center cursor-pointer justify-center gap-2 bg-white backdrop-blur-sm text-black px-4 sm:px-6 lg:px-10 py-2 sm:py-2.5 lg:py-3 rounded-lg sm:rounded-xl text-sm sm:text-base lg:text-lg font-semibold hover:bg-white hover:scale-105 transition-all duration-200">
-                          <span>Vezi Proiectul</span>
+                          <span>{t('view_project')}</span>
                         </button>
                       </div>
 
                       {/* Arrow Icon - Top Right */}
-                      <div className="absolute top-3 sm:top-4 lg:top-6 right-3 sm:right-4 lg:right-6 w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 cursor-pointer shadow-2xl bg-white/90 backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center group-hover:bg-white hover:scale-105 transition-all duration-200">
+                      <div onClick={() => handlePush(`/projects`)} className="absolute top-3 sm:top-4 lg:top-6 right-3 sm:right-4 lg:right-6 w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 cursor-pointer shadow-2xl bg-white/90 backdrop-blur-sm rounded-lg sm:rounded-xl flex items-center justify-center group-hover:bg-white hover:scale-105 transition-all duration-200">
                         <svg width="16" height="16" className="sm:w-5 sm:h-5 lg:w-6 lg:h-6" viewBox="0 0 16 16" fill="none">
                           <path 
                             d="M4 12L12 4M12 4H4M12 4V12" 
@@ -235,7 +292,7 @@ export default function Projects() {
                   ? 'bg-black w-4 sm:w-6' 
                   : 'bg-gray-300 hover:bg-gray-400'
               }`}
-              aria-label={`Go to slide ${index + 1}`}
+              aria-label={t('go_to_slide', {slide: index + 1})}
             />
           ))}
         </div>
