@@ -15,7 +15,7 @@ const LanguageSwitcher = ({ className }: { className?: string }) => {
         router.push(newPathname);
     };
 
-    const locales = ['ro', 'ru'];
+    const locales = ['ro', 'en'];
 
     const {
         ref,
@@ -49,7 +49,7 @@ const LanguageSwitcher = ({ className }: { className?: string }) => {
                                 <motion.li
                                     key={locale}
                                     onClick={() => locale === currentLocale ? '' : handleChangeLanguage(locale)}
-                                    className={cn('px-[1px]', { 'text-[#FF001D]': locale === currentLocale })}
+                                    className={cn('px-[1px]', { 'text-amber-600': locale === currentLocale })}
                                     initial={{ opacity: 0, x: -5 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: index * 0.1 }}

@@ -1,11 +1,14 @@
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
-export default function StepLeft({ title, content, imagePath, number } : {
-    title: string;
-    content: string;
+export default function StepLeft({ titleKey, contentKey, imagePath, number } : {
+    titleKey: string;
+    contentKey: string;
     imagePath: string;
     number: string;
 }) {
+    const t = useTranslations();
+    
     return (
         <div className="grid grid-cols-1 lg:grid-cols-2 mt-6 sm:mt-10 gap-6 lg:gap-0 px-5 lg:px-10">
             {/* Image Section */}
@@ -13,7 +16,7 @@ export default function StepLeft({ title, content, imagePath, number } : {
                 <div className="relative w-full max-w-md lg:max-w-none lg:w-full lg:h-full">
                     <Image
                         src={imagePath}
-                        alt={title}
+                        alt={t(titleKey)}
                         fill
                         className="object-cover rounded-br-[50px] rounded-tl-[50px] sm:rounded-br-[75px] sm:rounded-tl-[75px] lg:rounded-br-[100px] lg:rounded-tl-[100px]"
                     />
@@ -28,14 +31,14 @@ export default function StepLeft({ title, content, imagePath, number } : {
                         {number}
                     </p>
                     <p className="text-black font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl sm:ml-[-3%] lg:ml-[-5%] flex-1">
-                        {title}
+                        {t(titleKey)}
                     </p>
                 </div>
 
                 {/* Content Text */}
                 <div className="lg:pl-5">
                     <p className="font-inter font-semibold text-base sm:text-lg lg:text-xl text-[#383838] leading-relaxed">
-                        {content}
+                        {t(contentKey)}
                     </p>
                 </div>
             </div>

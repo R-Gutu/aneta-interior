@@ -1,43 +1,45 @@
 import StepRight from "../_components/StepRight";
 import StepLeft from "../_components/StepLeft";
+import { useTranslations } from 'next-intl';
 
 export default function Steps() {
+    const t = useTranslations();
 
     return (
         <div>
             <p className="w-full text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bricolage font-bold px-4 sm:px-0">
-                Etapele Proiectului
+                {t('steps.title')}
             </p>
             <p className="px-4 sm:px-[10%] md:px-[15%] lg:px-[20%] text-center text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
-                Procesul de creare a unui design unic, trecând prin etapele cheie de la concept la implementarea completă, asigură calitate înaltă și atenție la detalii în fiecare etapă.
+                {t('steps.description')}
             </p>
             <StepRight
-                title="Crearea Conceptului"
-                content="Începem cu dezvoltarea unui concept unic, care va sublinia caracteristicile dvs. individuale și va evidenția proiectul dvs. în rândul altora."
+                titleKey="steps.concept_title"
+                contentKey="steps.concept_description"
                 imagePath="/images/steps1.jpg"
                 number="01"
             />
             <StepLeft
-                title="Proiectarea Spațiului"
-                content="Următorul pas este crearea unui plan 2D detaliat, care ilustrează funcționalitatea și fluxul optim al spațiului."
+                titleKey="steps.space_design_title"
+                contentKey="steps.space_design_description"
                 imagePath="/images/steps2.jpg"
                 number="02"
             />
             <StepRight
-                title="Modelare 3D"
-                content="În această etapă, aducem conceptul la viață printr-un randament 3D, astfel încât să puteți vedea toate detaliile și proporțiile viitorului dvs. spațiu."
+                titleKey="steps.modeling_3d_title"
+                contentKey="steps.modeling_3d_description"
                 imagePath="/images/steps3.jpg"
                 number="03"
             />
             <StepLeft
-                title="Detaliile Execuției"
-                content="Dezvoltăm cu atenție toate specificațiile tehnice pentru a ne asigura că fiecare element al proiectului dvs. este realizat cu cea mai mare precizie."
+                titleKey="steps.execution_details_title"
+                contentKey="steps.execution_details_description"
                 imagePath="/images/steps4.jpg"
                 number="04"
             />
             <StepRight
-                title="Selecție materiale și mobilier"
-                content="Selectăm materiale și finisaje care se potrivesc perfect conceptului și bugetului proiectului dvs., pentru a crea un spațiu armonios și elegant."
+                titleKey="steps.materials_selection_title"
+                contentKey="steps.materials_selection_description"
                 imagePath="/images/steps5.jpg"
                 number="05"
             />
