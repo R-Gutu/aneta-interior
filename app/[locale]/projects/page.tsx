@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import Projects from './_components/Projects'
-import Form from '../_components/Form'
+import Form from '../_components/FormComponent'
 
 const page = () => {
   return (
