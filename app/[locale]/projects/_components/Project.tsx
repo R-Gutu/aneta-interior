@@ -156,16 +156,16 @@ const Project = ({ slide1, slide2, filter }: ProjectProps) => {
     className: string; 
     priority?: boolean;
   }) => {
-    const [imageError, setImageError] = useState(false);
+    // const [imageError, setImageError] = useState(false);
     const isLoaded = imagesLoaded.has(src);
 
-    if (imageError) {
-      return (
-        <div className={`${className} bg-gray-100 flex items-center justify-center`}>
-          <div className="text-gray-500">Image unavailable</div>
-        </div>
-      );
-    }
+    // if (imageError) {
+    //   return (
+    //     <div className={`${className} bg-gray-100 flex items-center justify-center`}>
+    //       <div className="text-gray-500">Image unavailable</div>
+    //     </div>
+    //   );
+    // }
 
     return (
       <div className="relative w-full h-full">
@@ -178,7 +178,7 @@ const Project = ({ slide1, slide2, filter }: ProjectProps) => {
           className={`${className} ${!isLoaded ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
           priority={priority}
           quality={85}
-          onError={() => setImageError(true)}
+          // onError={() => setImageError(true)}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
