@@ -15,8 +15,9 @@ const ProjectsPage = () => {
         <Image 
           src='/images/projects-hero.png' 
           alt='project' 
-          width={15000} 
-          height={200} 
+          width={800} 
+          height={800} 
+          priority
           className='w-full h-auto' 
         />
       </div>

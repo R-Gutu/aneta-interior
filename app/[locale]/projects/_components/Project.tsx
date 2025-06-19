@@ -177,9 +177,7 @@ const Project = ({ slide1, slide2, filter }: ProjectProps) => {
           height={800}
           className={`${className} ${!isLoaded ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
           priority={priority}
-          quality={85}
-
-          onError={() => setImageError(true)}
+          quality={80}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>

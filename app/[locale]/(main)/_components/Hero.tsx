@@ -26,7 +26,7 @@ const Hero = () => {
       setCurrentImageIndex((prevIndex) => 
         (prevIndex + 1) % backgroundImages.length
       );
-    }, 3000); // Change image every 2 seconds
+    }, 3000); // Change image every 3 seconds
     
     return () => clearInterval(interval); // Cleanup on unmount
   }, [backgroundImages.length]);
@@ -40,7 +40,7 @@ const Hero = () => {
   }
   
   return (
-    <div className="w-full h-screen relative overflow-x-hidden">
+    <div className="w-full h-screen relative overflow-hidden">
       {/* Background Images - Full Screen */}
       <div className="absolute inset-0">
         {backgroundImages.map((src, index) => (
@@ -50,13 +50,16 @@ const Hero = () => {
             alt={`${t('hero.bg_alt')} ${index + 1}`} 
             fill 
             className={cn(
-              "object-cover px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 rounded-xl sm:rounded-2xl transition-opacity duration-1000",
+              "object-cover transition-opacity duration-1000",
               index === currentImageIndex ? "opacity-100" : "opacity-0"
             )}
             priority={index === 0} // Only prioritize the first image
           />
         ))}
       </div>
+      
+      {/* Overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/20 sm:bg-black/10" />
       
       {/* Optional: Image indicators */}
       <div className="absolute top-4 right-4 z-10 flex gap-2">
@@ -76,12 +79,12 @@ const Hero = () => {
       
       {/* Content Overlay */}
       <div className={cn("w-full h-full flex items-end justify-start lg:ml-20 xl:ml-30", "max-sm:items-end max-sm:justify-center")}>
-        <div className="z-10 flex flex-col sm:flex-row items-center md:items-start justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 px-4 sm:px-6 md:px-8 lg:px-[40px] pt-6 sm:pt-8 md:pt-10 lg:pt-[40px] bg-white rounded-t-2xl sm:rounded-t-[32px]">
+        <div className="z-10 flex flex-col sm:flex-row items-center md:items-start justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 px-4 sm:px-6 md:px-8 lg:px-[40px] pt-6 sm:pt-8 md:pt-10 lg:pt-[40px] bg-white/95 backdrop-blur-sm sm:bg-white rounded-t-2xl sm:rounded-t-[32px] shadow-lg">
           <div className="flex flex-col items-center justify-center text-left">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-black mb-3 sm:mb-4 font-bricolage">
               {t('hero.title')}
             </h1>
-            <p className="text-sm sm:text-base md:text-lg text-black max-w-xs sm:max-w-sm md:max-w-md font-inter">
+            <p className="text-sm sm:text-base md:text-lg text-black/80 max-w-xs sm:max-w-sm md:max-w-md font-inter">
               {t('hero.description')}
             </p>
           </div>
