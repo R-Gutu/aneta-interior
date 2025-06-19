@@ -21,7 +21,7 @@
   "navLabel": "Navigation",
   "languageSelectLabel": "Languages",
   "languageRO": "RO",
-  "languageRU": "RU",
+  "languageEN": "EN",
   "copyright": "© 2025 Aneta Design Interior. All rights reserved.",
   "createdBy": "Created by",
   "nav": {
@@ -58,7 +58,7 @@
     "title": "CEO",
     "subtitle": "Interior Designer",
     "name": "Ana Jantovan-Șum",
-    "see_services": "See services",
+    "see_services": "Learn about us",
     "arrow_alt": "arrow",
     "hero_title": "One name.",
     "hero_subtitle": "A unique vision.",

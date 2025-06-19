@@ -45,7 +45,7 @@ export default function CEO() {
             className='ml-0 sm:ml-10 lg:ml-20 w-full max-w-[500px] sm:max-w-[600px] lg:max-w-[700px] h-auto'
           />
         </div>
-      <div className="relative min-h-[400px] flex flex-col items-center justify-center text-center px-4">
+      <div className="relative min-h-[500px] flex flex-col items-center justify-center text-center px-4">
       {/* Background Image */}
       <Image 
         src="/images/contact.png" 
@@ -60,7 +60,7 @@ export default function CEO() {
         <h1 className="text-white text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8 drop-shadow-lg font-bricolage">
           {t('ceo.cta_title')}
         </h1>
-        <div className="bg-white p-3 rounded-full shadow-lg text-center font-inter text-black font-bold text-lg sm:text-xl cursor-pointer hover:bg-gray-100 hover:scale-105 transition-all duration-300 inline-block">
+        <div onClick={() => handlePush('/contacts')} className="bg-white px-6 py-4 rounded-full shadow-lg text-center font-inter text-black font-bold text-lg sm:text-xl cursor-pointer hover:bg-gray-100 hover:scale-105 transition-all duration-300 inline-block">
           {t('ceo.contact_us')}
         </div>
       </div>

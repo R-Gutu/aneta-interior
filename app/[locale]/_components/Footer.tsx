@@ -1,17 +1,19 @@
 'use client'
 import Image from "next/image"
 import Link from "next/link"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
+import { cn } from "@/lib/utils";
 
 export default function Footer() {
     const t = useTranslations('footer');
+    const locale = useLocale();
 
     const socials = [
-        { link: "", image: "/svgs/socials/instagram.svg", name: "instagram" },
-        { link: "", image: "/svgs/socials/tiktok.svg", name: "tiktok" },
-        { link: "", image: "/svgs/socials/facebook.svg", name: "facebook" },
-        { link: "", image: "/svgs/socials/whatsapp.svg", name: "whatsapp" },
-        { link: "", image: "/svgs/socials/telegram.svg", name: "telegram" }
+        { link: "https://www.instagram.com/aneta.interior?igsh=dHJweXNsYTIxbmc2", image: "/svgs/socials/instagram.svg", name: "instagram" },
+        { link: "https://www.tiktok.com/@aneta.interior?_t=ZM-8xKUqcSuFV7&_r=1", image: "/svgs/socials/tiktok.svg", name: "tiktok" },
+        { link: "https://www.facebook.com/share/19DsDmdp2z/", image: "/svgs/socials/facebook.svg", name: "facebook" },
+        { link: "https://wa.me/40732678611", image: "/svgs/socials/whatsapp.svg", name: "whatsapp" },
+        { link: "https://t.me/+40732678611", image: "/svgs/socials/telegram.svg", name: "telegram" }
     ];
 
     const navigationLinks = [
@@ -45,6 +47,7 @@ export default function Footer() {
                                 {socials.map(({ link, image, name }, i) => (
                                     <Link 
                                         key={i} 
+                                        target="blank"
                                         href={link || "#"}
                                         className="group relative p-2 rounded-full bg-white shadow-sm border border-gray-200/50 transition-all duration-300 hover:shadow-lg hover:shadow-gray-900/10 hover:scale-110 hover:-translate-y-1"
                                         aria-label={`${t('followUs')} ${name}`}
@@ -116,12 +119,12 @@ export default function Footer() {
                         <div className="flex flex-col items-start lg:items-end space-y-3">
                             <h4 className="font-inter text-black font-semibold">{t('languageSelectLabel')}</h4>
                             <div className="flex gap-3">
-                                <button className="font-montserrat text-black font-semibold px-3 py-1 rounded-md bg-amber-100 hover:bg-amber-200 transition-colors duration-300">
+                                <Link href="/ro" className={cn("font-montserrat text-black font-semibold px-3 py-1 rounded-md hover:bg-amber-200 transition-colors duration-300", locale === "ro" ? "bg-amber-100" : "")}>
                                     {t('languageRO')}
-                                </button>
-                                <button className="font-montserrat text-gray-500 hover:text-gray-800 px-3 py-1 rounded-md hover:bg-orange-50 transition-all duration-300">
-                                    {t('languageRU')}
-                                </button>
+                                </Link>
+                                <Link href="/en" className={cn("font-montserrat text-black font-semibold px-3 py-1 rounded-md hover:bg-amber-200 transition-all duration-300", locale === "en" ? "bg-amber-100" : "")}>
+                                    {t('languageEN')}
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -136,10 +139,11 @@ export default function Footer() {
                         <p className="font-montserrat text-gray-500 text-xs">
                             {t('createdBy')}
                             <Link 
-                                href="#" 
+                                target="blank"
+                                href="https://www.quant-apps.com" 
                                 className="text-amber-600 hover:text-orange-600 transition-colors duration-300 hover:underline"
                             >
-                                Quant-Apps
+                               <span> </span>  Quant-Apps
                             </Link>
                         </p>
                     </div>
