@@ -4,7 +4,7 @@ import Projects from './_components/Projects'
 import Form from '../_components/FormComponent'
 import { useTranslations } from 'next-intl'
 
-const page = () => {
+const ProjectsPage = () => {
   const t = useTranslations('projects');
   return (
     <div className='pt-20 sm:pt-32 lg:pt-40'>
@@ -26,4 +26,4 @@ const page = () => {
   )
 }
 
-export default page
+export default ProjectsPage

@@ -3,7 +3,7 @@ import Image from 'next/image'
 import FormElement from '../_components/FormElement'
 import { useTranslations } from 'next-intl'
 
-const page = () => {
+const ContactPage = () => {
   const t = useTranslations('contact');
 
   const socials = [
@@ -120,4 +120,4 @@ const page = () => {
   )
 }
 
-export default page
+export default ContactPage
