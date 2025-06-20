@@ -2,16 +2,29 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useTranslations } from "next-intl"
+import { useLocale } from "next-intl";
+import { useRouter, usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 export default function Footer() {
     const t = useTranslations('footer');
+    const router = useRouter();
+    const pathname = usePathname();
+    const currentLocale = useLocale();
+
+    const handleChangeLanguage = (value: string) => {
+        const newPathname = pathname.replace(`/${currentLocale}`, `/${value}`);
+        router.push(newPathname);
+    };
 
     const socials = [
-        { link: "", image: "/svgs/socials/instagram.svg", name: "instagram" },
-        { link: "", image: "/svgs/socials/tiktok.svg", name: "tiktok" },
-        { link: "", image: "/svgs/socials/facebook.svg", name: "facebook" },
-        { link: "", image: "/svgs/socials/whatsapp.svg", name: "whatsapp" },
-        { link: "", image: "/svgs/socials/telegram.svg", name: "telegram" }
+        { link: "https://www.instagram.com/aneta.interior", image: "/svgs/socials/instagram.svg", name: "instagram" },
+        { link: "https://www.tiktok.com/@aneta.interior", image: "/svgs/socials/tiktok.svg", name: "tiktok" },
+        { link: "https://www.facebook.com/aneta.interior", image: "/svgs/socials/facebook.svg", name: "facebook" },
+        { link: "https://wa.me/40732678611", image: "/svgs/socials/whatsapp.svg", name: "whatsapp" },
+        { link: "https://t.me/Anetainterior25", image: "/svgs/socials/telegram.svg", name: "telegram" },
+        { link: "https://www.behance.net/anetainterior", image: "/svgs/socials/behance.svg", name: "behance" },
+        { link: "https://www.pinterest.com/anetainterior", image: "/svgs/socials/pinterest.svg", name: "pinterest" },
     ];
 
     const navigationLinks = [
@@ -32,19 +45,19 @@ export default function Footer() {
                         <div className="space-y-6">
                             <div className="group">
                                 <Image
-                                    src="/images/logo_footer.png" 
-                                    width={130} 
-                                    height={130} 
+                                    src="/images/logo_footer.png"
+                                    width={130}
+                                    height={130}
                                     alt={t('logoAlt')}
                                     className="rounded-full transition-all duration-500 group-hover:scale-105 group-hover:drop-shadow-lg"
                                 />
                             </div>
-                            
+
                             {/* Social Media Links */}
                             <div className="flex flex-wrap gap-4">
                                 {socials.map(({ link, image, name }, i) => (
-                                    <Link 
-                                        key={i} 
+                                    <Link
+                                        key={i}
                                         href={link || "#"}
                                         className="group relative p-2 rounded-full bg-white shadow-sm border border-gray-200/50 transition-all duration-300 hover:shadow-lg hover:shadow-gray-900/10 hover:scale-110 hover:-translate-y-1"
                                         aria-label={`${t('followUs')} ${name}`}
@@ -68,12 +81,12 @@ export default function Footer() {
                                 {t('contactHeading')}
                                 <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-gradient-to-r from-amber-500 to-orange-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
                             </h3>
-                            
+
                             <div className="space-y-6">
                                 {/* Phone */}
                                 <div className="group space-y-2">
                                     <h4 className="font-inter font-bold text-black text-lg">{t('phoneLabel')}</h4>
-                                    <Link 
+                                    <Link
                                         href="tel:+40732678611"
                                         className="inline-block font-montserrat text-gray-600 text-sm hover:text-amber-600 transition-colors duration-300 hover:underline decoration-amber-600 underline-offset-4"
                                     >
@@ -116,11 +129,27 @@ export default function Footer() {
                         <div className="flex flex-col items-start lg:items-end space-y-3">
                             <h4 className="font-inter text-black font-semibold">{t('languageSelectLabel')}</h4>
                             <div className="flex gap-3">
-                                <button className="font-montserrat text-black font-semibold px-3 py-1 rounded-md bg-amber-100 hover:bg-amber-200 transition-colors duration-300">
+                                <button
+                                    onClick={() => currentLocale === 'ro' ? '' : handleChangeLanguage('ro')}
+                                    className={cn(
+                                        "cursor-pointer font-montserrat px-3 py-1 rounded-md transition-all duration-300",
+                                        currentLocale === 'ro'
+                                            ? "text-black font-semibold bg-amber-100 hover:bg-amber-200"
+                                            : "text-gray-500 hover:text-gray-800 hover:bg-orange-50"
+                                    )}
+                                >
                                     {t('languageRO')}
                                 </button>
-                                <button className="font-montserrat text-gray-500 hover:text-gray-800 px-3 py-1 rounded-md hover:bg-orange-50 transition-all duration-300">
-                                    {t('languageRU')}
+                                <button
+                                    onClick={() => currentLocale === 'en' ? '' : handleChangeLanguage('en')}
+                                    className={cn(
+                                        "cursor-pointer font-montserrat px-3 py-1 rounded-md transition-all duration-300",
+                                        currentLocale === 'en'
+                                            ? "text-black font-semibold bg-amber-100 hover:bg-amber-200"
+                                            : "text-gray-500 hover:text-gray-800 hover:bg-orange-50"
+                                    )}
+                                >
+                                    {t('languageEN')}
                                 </button>
                             </div>
                         </div>
@@ -134,9 +163,10 @@ export default function Footer() {
                             {t('copyright')}
                         </p>
                         <p className="font-montserrat text-gray-500 text-xs">
-                            {t('createdBy')}
-                            <Link 
-                                href="#" 
+                            {t('createdBy')}&nbsp;
+                            <Link
+                                target="_blank"
+                                href="https://www.quant-apps.com/"
                                 className="text-amber-600 hover:text-orange-600 transition-colors duration-300 hover:underline"
                             >
                                 Quant-Apps

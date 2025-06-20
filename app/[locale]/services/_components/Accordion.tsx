@@ -28,7 +28,7 @@ const Accordion = ({
       {/* Header */}
       <button
         onClick={toggleItem}
-        className="w-full p-4 sm:p-6 flex items-center justify-between text-left hover:bg-gray-100 transition-all duration-300 group"
+        className="cursor-pointer w-full p-4 sm:p-6 flex items-center justify-between text-left hover:bg-gray-100 transition-all duration-300 group"
       >
         <p className="font-bricolage text-lg sm:text-xl md:text-2xl font-bold text-[#383838] pr-3 sm:pr-4 transition-colors group-hover:text-[#191A23] leading-tight">
           {t(titleKey)}

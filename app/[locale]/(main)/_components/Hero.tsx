@@ -8,7 +8,7 @@ import { useRouter } from '@/i18n/navigation'
 const Hero = () => {
   const t = useTranslations();
   const router = useRouter()
-  
+
   // Array of background images
   const backgroundImages = [
     '/images/herobg1.jpg',
@@ -17,66 +17,44 @@ const Hero = () => {
     '/images/herobg4.jpg',
     '/images/herobg5.jpg'
   ];
-  
+
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  
+
   // Auto-scroll effect
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => 
+      setCurrentImageIndex((prevIndex) =>
         (prevIndex + 1) % backgroundImages.length
       );
     }, 3000); // Change image every 2 seconds
-    
+
     return () => clearInterval(interval); // Cleanup on unmount
   }, [backgroundImages.length]);
-  
+
   const handlePush = (link: string) => {
-      try {
-          router.push(link);
-      } catch (error) {
-          console.error('Navigation error:', error);
-      }
+    try {
+      router.push(link);
+    } catch (error) {
+      console.error('Navigation error:', error);
+    }
   }
-  
+
   return (
-    <div className="w-full h-screen relative overflow-x-hidden">
+    <div className="w-full overflow-x-hidden max-h-screen">
       {/* Background Images - Full Screen */}
-      <div className="absolute inset-0">
-        {backgroundImages.map((src, index) => (
-          <Image 
-            key={src}
-            src={src} 
-            alt={`${t('hero.bg_alt')} ${index + 1}`} 
-            fill 
-            className={cn(
-              "object-cover px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 rounded-xl sm:rounded-2xl transition-opacity duration-1000",
-              index === currentImageIndex ? "opacity-100" : "opacity-0"
-            )}
-            priority={index === 0} // Only prioritize the first image
-          />
-        ))}
+      <div className='w-full aspect-[16/9] lg:aspect-auto overflow-hidden max-h-[100vh]'>
+        <Image
+          src={backgroundImages[currentImageIndex]}
+          alt={`${t('hero.bg_alt')} ${currentImageIndex + 1}`}
+          width={2000}
+          height={2000}
+          className={"object-cover h-full max-h-screen object-[100%_70%] transition-opacity duration-1000"}
+          priority
+        />
       </div>
-      
-      {/* Optional: Image indicators */}
-      <div className="absolute top-4 right-4 z-10 flex gap-2">
-        {backgroundImages.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentImageIndex(index)}
-            className={cn(
-              "w-2 h-2 rounded-full transition-all duration-300",
-              index === currentImageIndex 
-                ? "bg-white scale-125" 
-                : "bg-white/50 hover:bg-white/75"
-            )}
-          />
-        ))}
-      </div>
-      
       {/* Content Overlay */}
-      <div className={cn("w-full h-full flex items-end justify-start lg:ml-20 xl:ml-30", "max-sm:items-end max-sm:justify-center")}>
-        <div className="z-10 flex flex-col sm:flex-row items-center md:items-start justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 px-4 sm:px-6 md:px-8 lg:px-[40px] pt-6 sm:pt-8 md:pt-10 lg:pt-[40px] bg-white rounded-t-2xl sm:rounded-t-[32px]">
+      <div className={cn("md:absolute w-full bottom-0 flex items-end justify-start ml-0 lg:pl-20 xl:pl-30", "max-sm:items-end max-sm:justify-center")}>
+        <div className="pb-5 z-10 w-full lg:w-auto flex flex-col sm:flex-row items-center md:items-start justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 px-4 sm:px-6 md:px-8 lg:px-[40px] pt-6 sm:pt-8 md:pt-10 lg:pt-[40px] bg-white rounded-t-2xl sm:rounded-t-[32px]">
           <div className="flex flex-col items-center justify-center text-left">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-black mb-3 sm:mb-4 font-bricolage">
               {t('hero.title')}

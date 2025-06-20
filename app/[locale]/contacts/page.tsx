@@ -6,33 +6,18 @@ import { useTranslations } from 'next-intl'
 const page = () => {
   const t = useTranslations('contact');
 
+
+
   const socials = [
-    {
-      link: "",
-      image: "/svgs/instagram.svg",
-      name: "instagram"
-    },
-    {
-      link: "",
-      image: "/svgs/tiktok.svg",
-      name: "tiktok"
-    },
-    {
-      link: "",
-      image: "/svgs/facebook.svg",
-      name: "facebook"
-    },
-    {
-      link: "",
-      image: "/svgs/whatsapp.svg",
-      name: "whatsapp"
-    },
-    {
-      link: "",
-      image: "/svgs/telegram.svg",
-      name: "telegram"
-    }
-  ]
+    { link: "https://www.instagram.com/aneta.interior", image: "/svgs/instagram.svg", name: "instagram" },
+    { link: "https://www.tiktok.com/@aneta.interior", image: "/svgs/tiktok.svg", name: "tiktok" },
+    { link: "https://www.facebook.com/aneta.interior", image: "/svgs/facebook.svg", name: "facebook" },
+    { link: "https://wa.me/40732678611", image: "/svgs/whatsapp.svg", name: "whatsapp" },
+    { link: "https://t.me/Anetainterior25", image: "/svgs/telegram.svg", name: "telegram" },
+    { link: "https://www.behance.net/anetainterior", image: "/svgs/behance.svg", name: "behance" },
+    { link: "https://www.pinterest.com/anetainterior", image: "/svgs/pinterest.svg", name: "pinterest" },
+  ];
+
 
   return (
     <div className="min-h-screen bg-gray-50 p-4 md:p-8">
@@ -89,11 +74,11 @@ const page = () => {
               </div>
 
               {/* Bottom Section - Social Media Icons */}
-              <div className="flex lg:flex-col gap-3 items-start">
+              <div className="flex lg:flex-col max-[390px]:flex-wrap justify-center gap-3">
                 {socials.map(({ link, image, name }, i) => (
-                  <a 
-                    key={i} 
-                    href={link || "#"} 
+                  <a
+                    key={i}
+                    href={link || "#"}
                     className=""
                     aria-label={`Follow us on ${name}`}
                   >
