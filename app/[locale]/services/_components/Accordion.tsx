@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { useRouter } from '@/i18n/navigation';
 
 const Accordion = ({ 
   titleKey, 
@@ -18,6 +19,14 @@ const Accordion = ({
 }) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
   const t = useTranslations();
+  const router = useRouter();
+    const handlePush = (link: string) => {
+        try {
+            router.push(link);
+        } catch (error) {
+            console.error('Navigation error:', error);
+        }
+    }
 
   const toggleItem = () => {
     setIsOpen(!isOpen);
@@ -28,7 +37,7 @@ const Accordion = ({
       {/* Header */}
       <button
         onClick={toggleItem}
-        className="cursor-pointer w-full p-4 sm:p-6 flex items-center justify-between text-left hover:bg-gray-100 transition-all duration-300 group"
+        className="w-full p-4 sm:p-6 flex cursor-pointer items-center justify-between text-left hover:bg-gray-100 transition-all duration-300 group"
       >
         <p className="font-bricolage text-lg sm:text-xl md:text-2xl font-bold text-[#383838] pr-3 sm:pr-4 transition-colors group-hover:text-[#191A23] leading-tight">
           {t(titleKey)}
@@ -92,15 +101,14 @@ const Accordion = ({
                   {/* Link Button */}
                   {link && (
                     <div className="mt-4 sm:mt-6">
-                      <a 
-                        href={link}
-                        className="inline-flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-white rounded-lg transition-all duration-300 font-medium text-sm sm:text-base shadow-lg hover:shadow-xl hover:shadow-black/20 hover:scale-105 hover:bg-gray-50 active:scale-95 group/link"
+                      <div onClick={() => handlePush(link)}
+                        className="inline-flex cursor-pointer items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-white rounded-lg transition-all duration-300 font-medium text-sm sm:text-base shadow-lg hover:shadow-xl hover:shadow-black/20 hover:scale-105 hover:bg-gray-50 active:scale-95 group/link"
                       >
                         <span className="transition-transform duration-300 group-hover/link:translate-x-1">
                           {t('common.viewExamples')}
                         </span>
                         <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 group-hover/link:translate-x-1 group-hover/link:-translate-y-1" />
-                      </a>
+                      </div>
                     </div>
                   )}
                 </div>

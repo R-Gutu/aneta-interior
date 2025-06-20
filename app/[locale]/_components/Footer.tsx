@@ -169,7 +169,7 @@ export default function Footer() {
                                 href="https://www.quant-apps.com/"
                                 className="text-amber-600 hover:text-orange-600 transition-colors duration-300 hover:underline"
                             >
-                                Quant-Apps
+                               <span> </span>  Quant-Apps
                             </Link>
                         </p>
                     </div>

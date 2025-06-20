@@ -59,7 +59,7 @@ const Hero = () => {
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-black mb-3 sm:mb-4 font-bricolage">
               {t('hero.title')}
             </h1>
-            <p className="text-sm sm:text-base md:text-lg text-black max-w-xs sm:max-w-sm md:max-w-md font-inter">
+            <p className="text-sm sm:text-base md:text-lg text-black/80 max-w-xs sm:max-w-sm md:max-w-md font-inter">
               {t('hero.description')}
             </p>
           </div>

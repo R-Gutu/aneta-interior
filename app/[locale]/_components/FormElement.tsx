@@ -123,7 +123,7 @@ export default function FormElement() {
         <FormField
           control={form.control}
           name="services"
-          render={({ field }) => (
+          render={() => (
             <FormItem>
               <FormLabel className="text-lg text-gray-700 font-semibold">
                 {t('servicesLabel')}
