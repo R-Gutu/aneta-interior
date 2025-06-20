@@ -121,7 +121,6 @@ export default function Face() {
                     src={"/images/services-left.png"}
                     fill
                     className='object-cover'
-                    priority
                     alt={t('face.services_left_alt')} // LOCALIZED Image alt
                 />
             </motion.div>
@@ -163,7 +162,6 @@ export default function Face() {
                         priority
                         src={"/images/services-bottom.png"}
                         fill
-                        priority
                         className='object-cover object-[center_90%]'
                         alt={t('face.services_bottom_alt')} // LOCALIZED Image alt
                     />
