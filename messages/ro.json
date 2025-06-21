@@ -1,60 +1,62 @@
 {
-    "header": {
-  "logoAlt": "siglă",
-  "burgerAlt": "meniul de navigare",
-  "closeAlt": "închide meniul",
-  "nav": {
-    "about": "Despre noi",
-    "services": "Servicii",
-    "proiecte": "Proiecte",
-    "contacte": "Contacte"
-  }
-},
-"footer": {
-  "logoAlt": "Aneta Design Interior Logo",
-  "followUs": "Urmărește-ne pe",
-  "contactHeading": "CONTACTE",
-  "phoneLabel": "TELEFON:",
-  "addressLabel": "ADRESA:",
-  "addressLine1": "România, mun. București,",
-  "addressLine2": "str. Splaiul Independenței, 202 B",
-  "navLabel": "Navigare",
-  "languageSelectLabel": "Limbi",
-  "languageRO": "RO",
-  "languageEN": "EN",
-  "copyright": "© 2025 Aneta Design Interior. Toate drepturile rezervate.",
-  "createdBy": "Creat de",
-  "nav": {
-    "about": "Despre noi",
-    "services": "Servicii",
-    "projects": "Proiecte",
-    "contact": "Contact"
-  }
-},
-"contactForm": {
-  "title": "Proiect creativ?",
-  "subtitle": "Să avem o discuție productivă.",
-  "fullNameLabel": "Nume complet",
-  "fullNamePlaceholder": "Introdu numele tău",
-  "emailLabel": "Email",
-  "emailPlaceholder": "Introdu adresa de email",
-  "servicesLabel": "Selectează serviciile de care ai nevoie:",
-  "services": {
-    "render3d": "Render 3D",
-    "designMobilier": "Design mobilier personalizat",
-    "pachetPlus": "Pachet Plus",
-    "designExterior": "Design de exterior (fațade, terase, curți)",
-    "implementare": "Implementare",
-    "consultanta": "Consultanță design interior"
+  "header": {
+    "logoAlt": "siglă",
+    "burgerAlt": "meniul de navigare",
+    "closeAlt": "închide meniul",
+    "nav": {
+      "about": "Despre noi",
+      "services": "Servicii",
+      "proiecte": "Proiecte",
+      "contacte": "Contacte"
+    }
   },
-  "messageLabel": "Mesajul tău",
-  "messagePlaceholder": "Descrie proiectul, obiectivele și prioritățile tale...",
-  "submitButton": "Trimite mesajul",
-  "submitButtonSending": "Se trimite...",
-  "successMessage": "Mesajul a fost trimis cu succes!",
-  "errorMessage": "A apărut o eroare. Te rugăm să încerci din nou."
-},
-"ceo": {
+  "footer": {
+    "logoAlt": "Aneta Design Interior Logo",
+    "followUs": "Urmărește-ne pe",
+    "contactHeading": "CONTACTE",
+    "phoneLabel": "TELEFON:",
+    "addressLabel": "ADRESA:",
+    "addressLine1": "România, mun. București,",
+    "addressLine2": "str. Splaiul Independenței, 202 B",
+    "navLabel": "Navigare",
+    "languageSelectLabel": "Limbi",
+    "languageRO": "RO",
+    "languageEN": "EN",
+    "copyright": "© 2025 Aneta Design Interior. Toate drepturile rezervate.",
+    "createdBy": "Creat de",
+    "nav": {
+      "about": "Despre noi",
+      "services": "Servicii",
+      "projects": "Proiecte",
+      "contact": "Contact"
+    }
+  },
+  "contactForm": {
+    "title": "Proiect creativ?",
+    "subtitle": "Să avem o discuție productivă.",
+    "fullNameLabel": "Nume complet",
+    "fullNamePlaceholder": "Introdu numele tău",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Introdu adresa de email",
+    "phoneLabel": "Număr de telefon",
+    "phonePlaceholder": "Introdu numărul tău de telefon",
+    "servicesLabel": "Selectează serviciile de care ai nevoie:",
+    "services": {
+      "render3d": "Render 3D",
+      "designMobilier": "Design mobilier personalizat",
+      "pachetPlus": "Pachet Plus",
+      "designExterior": "Design de exterior (fațade, terase, curți)",
+      "implementare": "Implementare",
+      "consultanta": "Consultanță design interior"
+    },
+    "messageLabel": "Mesajul tău",
+    "messagePlaceholder": "Descrie proiectul, obiectivele și prioritățile tale...",
+    "submitButton": "Trimite mesajul",
+    "submitButtonSending": "Se trimite...",
+    "successMessage": "Mesajul a fost trimis cu succes!",
+    "errorMessage": "A apărut o eroare. Te rugăm să încerci din nou."
+  },
+  "ceo": {
     "title": "CEO",
     "subtitle": "Designer interior",
     "name": "Ana Jantovan-Șum",
@@ -99,45 +101,45 @@
     "next_project": "Proiectul următor",
     "go_to_slide": "Mergi la diapozitivul {slide}",
     "slide1": {
-    "title": "Liniște în tonuri de catifea",
-    "alt": "Imagine a unui design interior modern urban"
-  },
-  "slide2": {
-    "title": "Esențe calme",
-    "alt": "Imagine a unui design interior modern elegant"
-  },
-  "slide3": {
-    "title": "Ritm urban - Cluj",
-    "alt": "Imagine a unui design interior modern urban"
-  },
-  "slide4": {
-    "title": "Subtilitate Nordică",
-    "alt": "Imagine a unui design interior modern elegant"
-  },
-  "slide5": {
-    "title": "Calm texturat",
-    "alt": "Imagine a unui design interior modern urban"
-  },
-  "slide6": {
-    "title": "Contrast delicat",
-    "alt": "Imagine a unui design interior modern elegant"
-  },
-  "slide7": {
-    "title": "Dialog în texturii faine",
-    "alt": "Imagine a unui design interior modern urban"
-  },
-  "slide8": {
-    "title": "Liniște de tonuri în catifea",
-    "alt": "Imagine a unui design interior modern elegant"
-  },
-  "slide9": {
-    "title": "Contrast delicat",
-    "alt": "Imagine a unui design interior modern urban"
-  },
-  "slide10": {
-    "title": "Tonuri de calm",
-    "alt": "Imagine a unui design interior modern elegant"
-  }
+      "title": "Liniște în tonuri de catifea",
+      "alt": "Imagine a unui design interior modern urban"
+    },
+    "slide2": {
+      "title": "Esențe calme",
+      "alt": "Imagine a unui design interior modern elegant"
+    },
+    "slide3": {
+      "title": "Ritm urban - Cluj",
+      "alt": "Imagine a unui design interior modern urban"
+    },
+    "slide4": {
+      "title": "Subtilitate Nordică",
+      "alt": "Imagine a unui design interior modern elegant"
+    },
+    "slide5": {
+      "title": "Calm texturat",
+      "alt": "Imagine a unui design interior modern urban"
+    },
+    "slide6": {
+      "title": "Contrast delicat",
+      "alt": "Imagine a unui design interior modern elegant"
+    },
+    "slide7": {
+      "title": "Dialog în texturii faine",
+      "alt": "Imagine a unui design interior modern urban"
+    },
+    "slide8": {
+      "title": "Liniște de tonuri în catifea",
+      "alt": "Imagine a unui design interior modern elegant"
+    },
+    "slide9": {
+      "title": "Contrast delicat",
+      "alt": "Imagine a unui design interior modern urban"
+    },
+    "slide10": {
+      "title": "Tonuri de calm",
+      "alt": "Imagine a unui design interior modern elegant"
+    }
   },
   "services": {
     "title": "Servicii",

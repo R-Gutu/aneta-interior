@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
@@ -17,16 +18,22 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useTranslations } from 'next-intl';
 
+// EmailJS Configuration Constants - Fill these with your actual values
+const EMAILJS_SERVICE_ID = 'service_ygz6zab';
+const EMAILJS_TEMPLATE_ID = 'template_zyvruk2';
+const EMAILJS_PUBLIC_KEY = 'NxaXNUOZOCYcvu-Jx';
+
 const formSchema = z.object({
-  fullName: z.string().min(2).max(50),
-  email: z.string().email(),
-  services: z.array(z.string()).min(1),
-  message: z.string().min(10).max(1000),
+  fullName: z.string().min(2, "Name must be at least 2 characters").max(50, "Name must be less than 50 characters"),
+  email: z.string().email("Please enter a valid email address"),
+  phone: z.string().optional(), // Optional field for phone number
+  services: z.array(z.string()).min(1, "Please select at least one service"),
+  message: z.string().min(10, "Message must be at least 10 characters").max(1000, "Message must be less than 1000 characters"),
 });
 
 type FormData = z.infer<typeof formSchema>;
 
-export default function FormElement() {
+export default function FormElement({ showPhone = false }: { showPhone?: boolean }) {
   const t = useTranslations('contactForm');
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
@@ -44,33 +51,76 @@ export default function FormElement() {
     defaultValues: {
       fullName: '',
       email: '',
-      services: ['render3d'], // Default to Render 3D selected
+      services: [],
       message: '',
+      phone: '', // Optional field for phone number
     },
   });
 
   const onSubmit = async (values: FormData) => {
+    // Validate environment variables
+    if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+      console.error('EmailJS configuration is missing');
+      alert(t('configError') || 'Email configuration error. Please try again later.');
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Get service labels for the selected services
+      const selectedServiceLabels = values.services.map(serviceId => {
+        const service = serviceOptions.find(option => option.id === serviceId);
+        return service ? service.label : serviceId;
+      });
 
-      console.log('Form submitted:', values);
-      alert(t('successMessage'));
+      // Prepare email data
+      const emailData = {
+        title: 'New Contact Form Submission',
+        time: new Date().toLocaleString(),
+        fullName: values.fullName,
+        email: values.email,
+        services: selectedServiceLabels.join(', '),
+        servicesCount: values.services.length,
+        message: values.message,
+        // Include individual services for template flexibility
+        ...values.services.reduce((acc, service, index) => {
+          acc[`service_${index + 1}`] = serviceOptions.find(opt => opt.id === service)?.label || service;
+          return acc;
+        }, {} as Record<string, string>)
+      };
+
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        emailData,
+        {
+          publicKey: EMAILJS_PUBLIC_KEY,
+        }
+      );
+
+      console.log('EmailJS Success:', result);
+      alert(t('successMessage') || 'Message sent successfully!');
 
       // Reset form after successful submission
-      form.reset();
+      form.reset({
+        fullName: '',
+        email: '',
+        services: ['render3d'],
+        message: '',
+        phone: '',
+      });
+
     } catch (error) {
-      console.error('Form submission error:', error);
-      alert(t('errorMessage'));
+      console.error('EmailJS Error:', error);
+      alert(t('errorMessage') || 'Failed to send message. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 font-inter">
         {/* Name and Email Row */}
@@ -85,6 +135,7 @@ export default function FormElement() {
                 </FormLabel>
                 <FormControl>
                   <Input
+                    type="text"
                     placeholder={t('fullNamePlaceholder')}
                     {...field}
                     disabled={isSubmitting}
@@ -118,6 +169,29 @@ export default function FormElement() {
             )}
           />
         </div>
+        {showPhone && <div>
+          <FormField
+            control={form.control}
+            name="phone"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-lg text-gray-700 font-semibold">
+                  {t('phoneLabel')}
+                </FormLabel>
+                <FormControl>
+                  <Input
+                    type="text"
+                    placeholder={t('phonePlaceholder')}
+                    {...field}
+                    disabled={isSubmitting}
+                    className="border-0 border-b border-gray-300 rounded-none bg-transparent px-0 pb-2 focus-visible:ring-0 focus-visible:border-gray-600 placeholder:text-gray-400"
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>}
 
         {/* Services Section */}
         <FormField
@@ -143,15 +217,18 @@ export default function FormElement() {
                           <FormControl>
                             <Checkbox
                               checked={field.value?.includes(service.id)}
-                              onCheckedChange={(checked) => checked
-                                ? field.onChange([...field.value, service.id])
-                                : field.onChange(field.value?.filter((value) => value !== service.id))
-                              }
+                              onCheckedChange={(checked) => {
+                                if (checked) {
+                                  field.onChange([...field.value, service.id]);
+                                } else {
+                                  field.onChange(field.value?.filter((value) => value !== service.id));
+                                }
+                              }}
                               disabled={isSubmitting}
                               className="data-[state=checked]:bg-gray-800 data-[state=checked]:border-gray-800"
                             />
                           </FormControl>
-                          <FormLabel className="text-gray-700 font-normal cursor-pointer">
+                          <FormLabel className="text-gray-700 text-left font-normal cursor-pointer">
                             {service.label}
                           </FormLabel>
                         </FormItem>

@@ -97,7 +97,7 @@ const ContactPage = () => {
 
           {/* Right Panel - Form */}
           <div className="p-8">
-            <FormElement />
+            <FormElement showPhone={true} />
           </div>
         </div>
       </div>

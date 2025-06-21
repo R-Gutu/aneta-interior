@@ -1,60 +1,62 @@
 {
-    "header": {
+  "header": {
     "logoAlt": "logo",
     "burgerAlt": "burger",
     "closeAlt": "close menu",
-        "nav": {
-            "about": "About us",
-            "services": "Services",
-            "proiecte": "Projects",
-            "contacte": "Contacts"
-        }
-    },
-    "footer": {
-  "logoAlt": "Aneta Design Interior Logo",
-  "followUs": "Follow us on",
-  "contactHeading": "CONTACTS",
-  "phoneLabel": "PHONE:",
-  "addressLabel": "ADDRESS:",
-  "addressLine1": "Romania, Bucharest municipality,",
-  "addressLine2": "Splaiul Independentei street, 202 B",
-  "navLabel": "Navigation",
-  "languageSelectLabel": "Languages",
-  "languageRO": "RO",
-  "languageEN": "EN",
-  "copyright": "© 2025 Aneta Design Interior. All rights reserved.",
-  "createdBy": "Created by",
-  "nav": {
-    "about": "About us",
-    "services": "Services",
-    "projects": "Projects",
-    "contact": "Contact"
-  }
-},
-"contactForm": {
-  "title": "Creative Project?",
-  "subtitle": "Let's have a productive discussion.",
-  "fullNameLabel": "Full Name",
-  "fullNamePlaceholder": "Enter your name",
-  "emailLabel": "Email",
-  "emailPlaceholder": "Enter your email address",
-  "servicesLabel": "Select the services you need:",
-  "services": {
-    "render3d": "3D Rendering",
-    "designMobilier": "Custom Furniture Design",
-    "pachetPlus": "Plus Package",
-    "designExterior": "Exterior Design (facades, terraces, courtyards)",
-    "implementare": "Implementation",
-    "consultanta": "Interior Design Consultation"
+    "nav": {
+      "about": "About us",
+      "services": "Services",
+      "proiecte": "Projects",
+      "contacte": "Contacts"
+    }
   },
-  "messageLabel": "Your Message",
-  "messagePlaceholder": "Describe your project, objectives, and priorities...",
-  "submitButton": "Send Message",
-  "submitButtonSending": "Sending...",
-  "successMessage": "Message sent successfully!",
-  "errorMessage": "An error occurred. Please try again."
-},
-"ceo": {
+  "footer": {
+    "logoAlt": "Aneta Design Interior Logo",
+    "followUs": "Follow us on",
+    "contactHeading": "CONTACTS",
+    "phoneLabel": "PHONE:",
+    "addressLabel": "ADDRESS:",
+    "addressLine1": "Romania, Bucharest municipality,",
+    "addressLine2": "Splaiul Independentei street, 202 B",
+    "navLabel": "Navigation",
+    "languageSelectLabel": "Languages",
+    "languageRO": "RO",
+    "languageEN": "EN",
+    "copyright": "© 2025 Aneta Design Interior. All rights reserved.",
+    "createdBy": "Created by",
+    "nav": {
+      "about": "About us",
+      "services": "Services",
+      "projects": "Projects",
+      "contact": "Contact"
+    }
+  },
+  "contactForm": {
+    "title": "Creative Project?",
+    "subtitle": "Let's have a productive discussion.",
+    "fullNameLabel": "Full Name",
+    "fullNamePlaceholder": "Enter your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Enter your email address",
+    "phoneLabel": "Phone number",
+    "phonePlaceholder": "Enter your phone number",
+    "servicesLabel": "Select the services you need:",
+    "services": {
+      "render3d": "3D Rendering",
+      "designMobilier": "Custom Furniture Design",
+      "pachetPlus": "Plus Package",
+      "designExterior": "Exterior Design (facades, terraces, courtyards)",
+      "implementare": "Implementation",
+      "consultanta": "Interior Design Consultation"
+    },
+    "messageLabel": "Your Message",
+    "messagePlaceholder": "Describe your project, objectives, and priorities...",
+    "submitButton": "Send Message",
+    "submitButtonSending": "Sending...",
+    "successMessage": "Message sent successfully!",
+    "errorMessage": "An error occurred. Please try again."
+  },
+  "ceo": {
     "title": "CEO",
     "subtitle": "Interior Designer",
     "name": "Ana Jantovan-Șum",
@@ -99,45 +101,45 @@
     "next_project": "Next project",
     "go_to_slide": "Go to slide {slide}",
     "slide1": {
-    "title": "Calm Textures",
-    "alt": "Image of modern urban interior design"
-  },
-  "slide2": {
-    "title": "Urban calm",
-    "alt": "Image of modern and minimalist interior design"
-  },
-  "slide3": {
-    "title": "Urban",
-    "alt": "Image of elegant modern interior design"
-  },
-  "slide4": {
-    "title": "Nordic subtle",
-    "alt": "Image of modern and minimalist interior design"
-  },
-  "slide5": {
-    "title": "Calm Texturat",
-    "alt": "Image of modern elegant and luxury interior design"
-  },
-  "slide6": {
-    "title": "Delicately",
-    "alt": "Image of modern and minimalist interior design"
-  },
-   "slide7": {
-    "title": "Dialogue",
-    "alt": "Image of luxury interior design"
-  },
-  "slide8": {
-    "title": "Lines on",
-    "alt": "Image of modern and minimalist interior design"
-  },
-  "slide9": {
-    "title": "Contrast",
-    "alt": "Image of modern elegant and luxury interior design"
-  },
-  "slide10": {
-    "title": "Calm,Tonuri",
-    "alt": "Image of modern and minimalist interior design"
-  }
+      "title": "Calm Textures",
+      "alt": "Image of modern urban interior design"
+    },
+    "slide2": {
+      "title": "Urban calm",
+      "alt": "Image of modern and minimalist interior design"
+    },
+    "slide3": {
+      "title": "Urban",
+      "alt": "Image of elegant modern interior design"
+    },
+    "slide4": {
+      "title": "Nordic subtle",
+      "alt": "Image of modern and minimalist interior design"
+    },
+    "slide5": {
+      "title": "Calm Texturat",
+      "alt": "Image of modern elegant and luxury interior design"
+    },
+    "slide6": {
+      "title": "Delicately",
+      "alt": "Image of modern and minimalist interior design"
+    },
+    "slide7": {
+      "title": "Dialogue",
+      "alt": "Image of luxury interior design"
+    },
+    "slide8": {
+      "title": "Lines on",
+      "alt": "Image of modern and minimalist interior design"
+    },
+    "slide9": {
+      "title": "Contrast",
+      "alt": "Image of modern elegant and luxury interior design"
+    },
+    "slide10": {
+      "title": "Calm,Tonuri",
+      "alt": "Image of modern and minimalist interior design"
+    }
   },
   "services": {
     "title": "Services",
