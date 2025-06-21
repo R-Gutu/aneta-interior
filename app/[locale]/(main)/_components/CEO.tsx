@@ -48,12 +48,13 @@ export default function CEO() {
       <div className="relative min-h-[500px] flex flex-col items-center justify-center text-center px-4">
       {/* Background Image */}
       <Image 
-        src="/images/contact.png" 
+        src="/images/contact.jpg" 
         alt={t('ceo.contact_bg_alt')}
         fill
         className="object-cover"
         priority
       />
+      <div className="absolute inset-0 bg-black/50"></div>
 
       {/* Content */}
       <div className={"relative z-20 max-w-xs sm:max-w-2xl lg:max-w-4xl mx-auto"}>
