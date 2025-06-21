@@ -2,12 +2,14 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { projects } from "@/lib/data/projects.data";
 import { getTranslations } from "next-intl/server";
-import Slider from "../_components/Slider";
+import Project from "../_components/Project";
+import { getLocale } from "next-intl/server";
 type SectionKey = 'living' | 'kitchen' | 'bedroom' | 'bathroom' | 'bedroom_children';
 
 export default async function Page({params}: {params: Promise<{ section: SectionKey }>}) {
     const { section } = await params;
     const t = await getTranslations("projects");
+    const locale = await getLocale();
 
     const filters = [
         { key: 'living', label: t('filters.living') },
@@ -31,7 +33,7 @@ export default async function Page({params}: {params: Promise<{ section: Section
                     className='w-full h-auto'
                 />
             </div>
-            <div className="flex flex-wrap justify-center sm:justify-start gap-2 sm:gap-3 my-8 sm:my-12 font-inter">
+            <div className="px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 flex flex-wrap justify-center sm:justify-start gap-2 sm:gap-3 my-8 sm:my-12 font-inter">
                 {filters.map(({ key, label }) => (
                     <Link
                         href={`/projects/${key}`}
@@ -45,9 +47,16 @@ export default async function Page({params}: {params: Promise<{ section: Section
                     </Link>
                 ))}
             </div>
-            {projects.map((p, i) => (
-                (p && p[section as SectionKey]) ? <Slider key={i} images={p[section as SectionKey]?.map((o) => o.image) ?? []} /> : null
-            ))}
+            <div className="flex flex-col gap-10">
+                {projects.filter((p) => section in p).map((p, i) => (
+                    (p) ? <Project 
+                    left={i%2 === 0}
+                    key={i} 
+                    title={locale === 'ro' ? p.titleRO : p.titleEN} 
+                    description={locale === 'ro' ? p.descriptionRO : p.descriptionEN} 
+                    images={p[section as SectionKey]?.map((o) => o.image) ?? []} /> : null
+                ))}
+            </div>
         </div>
     );
 }
