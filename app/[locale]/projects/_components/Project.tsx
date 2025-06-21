@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils"
 
 export default function Project({ title, description, images, left }: { title: string, description: string, images: string[], left: boolean }) {
     return (
-        <div className={cn(`grid grid-cols-1 lg:grid-cols-[70%_30%] px-[5%] sm:px-[7%] lg:px-[10%] gap-6 lg:gap-0`, { "lg:grid-cols-[30%_70%]": left })}>
+        <div className={cn(`grid grid-cols-1 lg:grid-cols-[70%_30%] px-[5%] sm:px-[7%] lg:px-[10%] gap-6 lg:gap-0 max-[1024px]:flex max-[1024px]:flex-col-reverse`, { "lg:grid-cols-[30%_70%]": left })}>
             <Slider 
                 images={images} 
                 className={cn("border-b-3 border-[#EAE9E5] lg:border-b-0", { 
@@ -18,7 +18,7 @@ export default function Project({ title, description, images, left }: { title: s
                 })}>
                     {title}
                 </p>
-                <p className={cn(`font-inter text-sm sm:text-base`, {
+                <p className={cn(`font-inter text-sm sm:text-base max-[1024px]:hidden`, {
                     "lg:pr-10": left, 
                     "lg:pl-10": !left
                 })}>

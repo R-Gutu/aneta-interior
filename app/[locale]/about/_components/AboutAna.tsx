@@ -38,15 +38,15 @@ export default function AboutAna() {
                 {t('about.paragraph2')}
               </p>
               
-              <p className="text-sm sm:text-base lg:text-lg">
+              <p className="text-sm sm:text-base lg:text-lg max-[1024px]:hidden">
                 {t('about.paragraph3')}
               </p>
               
-              <p className="text-sm sm:text-base lg:text-lg">
+              <p className="text-sm sm:text-base lg:text-lg max-[1024px]:hidden">
                 {t('about.paragraph4')}
               </p>
               
-              <p className="text-sm sm:text-base lg:text-lg">
+              <p className="text-sm sm:text-base lg:text-lg max-[1024px]:hidden">
                 {t('about.paragraph5')}
               </p>
             </div>

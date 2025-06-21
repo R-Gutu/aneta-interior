@@ -36,18 +36,6 @@ export default function InteriorShowcase() {
                 <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-black font-bricolage leading-none">
                    {t('interiorShowcase.cluj')}
                 </h2>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-black font-bricolage leading-none">
-                   {t('interiorShowcase.chic')}
-                </h2>
-              </div>
-              <div className="absolute left-[200px] md:top-[-80px] top-[-50px] w-full sm:w-auto max-w-[100px] md:max-w-[150px]">
-                <Image
-                    src="/images/interior3.png"
-                    width={200}
-                    height={200}
-                    alt={t('interiorShowcase.accent_image_alt')}
-                    className="w-full h-auto object-cover rounded-lg"
-                />
               </div>
             </div>
             
@@ -82,9 +70,6 @@ export default function InteriorShowcase() {
             <div className="p-4 md:p-6">
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-black font-bricolage leading-none">
                  {t('interiorShowcase.urban')}
-              </h2>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-black font-bricolage leading-none">
-                 {t('interiorShowcase.harmony')}
               </h2>
             </div>
             

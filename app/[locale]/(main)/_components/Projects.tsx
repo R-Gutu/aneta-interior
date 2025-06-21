@@ -199,7 +199,7 @@ export default function Projects() {
                         src={project.image}
                         alt={project.alt}
                         fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        className="object-cover object-[50%_70%] group-hover:scale-105 transition-transform duration-500"
                       />
                       
                       {/* Overlay Content */}

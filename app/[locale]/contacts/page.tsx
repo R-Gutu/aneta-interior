@@ -63,7 +63,7 @@ const ContactPage = () => {
                 {/* Email */}
                 <div className="flex items-center space-x-3">
                   <Image src="/svgs/letter.svg" alt="Email Icon" width={32} height={32} />
-                  <span className="text-sm md:text-base">anelinterior@gmail.com</span>
+                  <span className="text-sm md:text-base">anetainterior@gmail.com</span>
                 </div>
 
                 {/* Location */}
