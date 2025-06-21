@@ -193,15 +193,15 @@
     "services_bottom_alt": "Servicii Jos"
   },
   "ourServices": {
-    "title": "Serviciile Noastre",
-    "description": "Oferim o gamă completă de servicii de design și dezvoltare web, adaptate nevoilor specifice ale afacerii dumneavoastră. De la concepte creative la implementări tehnice avansate, echipa noastră vă ajută să vă transformați ideile în realitate digitală.",
-    "design3d_title": "Design Web 3D",
-    "design3d_description": "Creăm experiențe web interactive și captivante cu elemente 3D moderne. Folosim tehnologii de ultimă generație pentru a dezvolta site-uri web care se remarcă prin design inovator și funcționalitate avansată, oferind utilizatorilor o experiență unică și memorabilă.",
-    "design_avansat_title": "Design Web Avansat",
-    "design_avansat_description": "Dezvoltăm soluții web complexe și personalizate, adaptate cerințelor specifice ale afacerii dumneavoastră. De la aplicații web interactive la platforme e-commerce avansate, implementăm cele mai noi tehnologii pentru a vă oferi un avantaj competitiv pe piață.",
-    "design_all_inclusive_title": "Pachet Design Complet",
-    "design_all_inclusive_description": "Soluția completă pentru prezența dumneavoastră online - de la concept și design până la dezvoltare, optimizare SEO și întreținere. Includem totul: design responsiv, optimizare pentru motoarele de căutare, integrare cu rețelele sociale și suport tehnic continuu."
-  },
+      "title": "Serviciile Noastre",
+      "description": "Oferim o gamă completă de servicii de design și dezvoltare web, adaptate nevoilor specifice ale afacerii dumneavoastră. De la concepte creative la implementări tehnice avansate, echipa noastră vă ajută să vă transformați ideile în realitate digitală.",
+      "design3d_title": "Design 3D – Vizualizare & Concept",
+      "design3d_description": "1. Releveu și plan mobilare – pe baza măsurătorilor reale sau ale planului existent\n2. Tablou de concept – propunere vizuală cu stil, culori, texturi\n3. Randări 3D fotorealiste – 2–4 imagini pe cameră, pentru o viziune clară asupra spațiului\n4. Listă orientativă de mobilier și accesorii – cu dimensiuni și sugestii de achiziție\n\nIdeal pentru clienții care au echipă proprie de execuție, dar vor o direcție estetică clară.",
+      "design_avansat_title": "Design Avansat – Proiect Complet de Amenajare",
+      "design_avansat_description": "1. Releveu detaliat + planuri de mobilare personalizate\n2. Moodboard de design – paletă de culori, finisaje, mobilier, iluminat\n3. Randări 3D fotorealiste – 4–8 imagini pe cameră, din unghiuri diferite\n4. Planuri tehnice:\n   • Mobilier cu cote aproximative\n   • Iluminat & prize\n   • Instalații sanitare\n   • Finisaje și pardoseli\n5. Listă completă de achiziții – produse recomandate, coduri, linkuri\n\nPotrivit pentru clienți care vor un proiect clar pentru a-l implementa cu echipa lor.",
+      "design_all_inclusive_title": "Design All-Inclusive – Proiect + Implementare",
+      "design_all_inclusive_description": "1. Consultanță și măsurători pe teren\n2. Proiect complet de design (ca în pachetul avansat)\n3. Planificare lucrări + buget estimativ etapizat\n4. Coordonare echipă de execuție – colaboratori sau echipa proprie\n5. Achiziții asistate – suport în comenzi, livrări, retururi\n6. Supraveghere de autor – verificarea implementării conform proiectului\n7. Stilizare finală + decorare – draperii, accesorii, art deco\n\nServiciu full-service pentru clienți care își doresc totul gestionat de la A la Z."
+    },
   "common": {
     "viewExamples": "Vezi exemple"
   },
