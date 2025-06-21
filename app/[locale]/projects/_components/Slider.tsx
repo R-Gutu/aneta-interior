@@ -11,7 +11,7 @@ export default function Slider({ images, key: keyProp }: { images: string[], key
   const [animationKey, setAnimationKey] = useState(0);
 
   // Number of images to preload ahead (adjust as needed)
-  const PRELOAD_COUNT = 1;
+  const PRELOAD_COUNT = 2;
 
   const slideVariants = {
     enter: {
