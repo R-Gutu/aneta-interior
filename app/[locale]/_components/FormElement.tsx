@@ -80,6 +80,7 @@ export default function FormElement({ showPhone = false }: { showPhone?: boolean
         time: new Date().toLocaleString(),
         fullName: values.fullName,
         email: values.email,
+        phone: values.phone || '', // ✅ Add phone field
         services: selectedServiceLabels.join(', '),
         servicesCount: values.services.length,
         message: values.message,
@@ -89,7 +90,6 @@ export default function FormElement({ showPhone = false }: { showPhone?: boolean
           return acc;
         }, {} as Record<string, string>)
       };
-
       // Send email using EmailJS
       const result = await emailjs.send(
         EMAILJS_SERVICE_ID,
@@ -270,7 +270,7 @@ export default function FormElement({ showPhone = false }: { showPhone?: boolean
           <Button
             type="submit"
             disabled={isSubmitting}
-            className="bg-gray-800 text-white px-8 py-3 hover:bg-gray-900 disabled:opacity-50"
+            className="cursor-pointer bg-gray-800 text-white px-8 py-3 hover:bg-gray-900 disabled:opacity-50"
           >
             {isSubmitting ? (
               <span className="flex items-center justify-center">

@@ -38,6 +38,8 @@
   "fullNamePlaceholder": "Enter your name",
   "emailLabel": "Email",
   "emailPlaceholder": "Enter your email address",
+  "phoneLabel": "Phone",
+  "phonePlaceholder": "Enter your phone number",
   "servicesLabel": "Select the services you need:",
   "services": {
     "render3d": "3D Rendering",
@@ -47,53 +49,14 @@
     "implementare": "Implementation",
     "consultanta": "Interior Design Consultation"
   },
-  "footer": {
-    "logoAlt": "Aneta Design Interior Logo",
-    "followUs": "Follow us on",
-    "contactHeading": "CONTACTS",
-    "phoneLabel": "PHONE:",
-    "addressLabel": "ADDRESS:",
-    "addressLine1": "Romania, Bucharest municipality,",
-    "addressLine2": "Splaiul Independentei street, 202 B",
-    "navLabel": "Navigation",
-    "languageSelectLabel": "Languages",
-    "languageRO": "RO",
-    "languageEN": "EN",
-    "copyright": "© 2025 Aneta Design Interior. All rights reserved.",
-    "createdBy": "Created by",
-    "nav": {
-      "about": "About us",
-      "services": "Services",
-      "projects": "Projects",
-      "contact": "Contact"
-    }
-  },
-  "contactForm": {
-    "title": "Creative Project?",
-    "subtitle": "Let's have a productive discussion.",
-    "fullNameLabel": "Full Name",
-    "fullNamePlaceholder": "Enter your name",
-    "emailLabel": "Email",
-    "emailPlaceholder": "Enter your email address",
-    "phoneLabel": "Phone number",
-    "phonePlaceholder": "Enter your phone number",
-    "servicesLabel": "Select the services you need:",
-    "services": {
-      "render3d": "3D Rendering",
-      "designMobilier": "Custom Furniture Design",
-      "pachetPlus": "Plus Package",
-      "designExterior": "Exterior Design (facades, terraces, courtyards)",
-      "implementare": "Implementation",
-      "consultanta": "Interior Design Consultation"
-    },
-    "messageLabel": "Your Message",
-    "messagePlaceholder": "Describe your project, objectives, and priorities...",
-    "submitButton": "Send Message",
-    "submitButtonSending": "Sending...",
-    "successMessage": "Message sent successfully!",
-    "errorMessage": "An error occurred. Please try again."
-  },
-  "ceo": {
+  "messageLabel": "Your Message",
+  "messagePlaceholder": "Describe your project, objectives, and priorities...",
+  "submitButton": "Send Message",
+  "submitButtonSending": "Sending...",
+  "successMessage": "Message sent successfully!",
+  "errorMessage": "An error occurred. Please try again."
+},
+"ceo": {
     "title": "CEO",
     "subtitle": "Interior Designer",
     "name": "Ana Jantovan-Șum",
