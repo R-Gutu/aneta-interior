@@ -5,8 +5,8 @@ import { getTranslations } from "next-intl/server";
 import Slider from "../_components/Slider";
 type SectionKey = 'living' | 'kitchen' | 'bedroom' | 'bathroom' | 'bedroom_children';
 
-export default async function Page({ params }: { params: { section: SectionKey } }) {
-    const { section } = params;
+export default async function Page({params}: {params: Promise<{ section: SectionKey }>}) {
+    const { section } = await params;
     const t = await getTranslations("projects");
 
     const filters = [
