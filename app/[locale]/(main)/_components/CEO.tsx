@@ -18,13 +18,13 @@ export default function CEO() {
 
   return (
     <div className="min-h-screen bg-gray-50 relative">
-      <div className={cn("absolute left-[5%] sm:left-[8%] lg:left-[10%] top-[280px] flex flex-col items-start justify-start gap-4", "max-sm:hidden")}>
-        <h2 className='text-2xl sm:text-3xl lg:text-5xl font-bold text-black font-bricolage z-20'>
+      <div className={cn("absolute left-[5%] sm:left-[8%] lg:left-[10%] top-[280px] flex flex-col items-start justify-start gap-4", "max-sm:top-[240px] max-sm:gap-0")}>
+        <h2 className='text-xl sm:text-3xl lg:text-5xl font-bold text-black font-bricolage z-20'>
           {t('ceo.title')}<br/>
           <span>{t('ceo.subtitle')}</span>
         </h2>
-        <p className='text-xl sm:text-2xl lg:text-3xl font-medium text-black font-dancing-script'>{t('ceo.name')}</p>
-        <div onClick={() => handlePush('/about')} className="flex items-center font-inter text-lg sm:text-xl font-medium shadow-md text-black z-20 justify-center bg-white rounded-[16px] px-8 sm:px-10 py-4 sm:py-5 border-2 border-[#D9D9D9] hover:scale-105 cursor-pointer hover:bg-gray-100 transition-all duration-300">
+        <p className='text-lg sm:text-2xl lg:text-3xl font-medium text-black font-dancing-script'>{t('ceo.name')}</p>
+        <div onClick={() => handlePush('/about')} className="flex items-center font-inter text-lg sm:text-xl font-medium shadow-md text-black z-20 justify-center bg-white rounded-[16px] px-8 sm:px-10 py-4 sm:py-5 border-2 border-[#D9D9D9] hover:scale-105 cursor-pointer hover:bg-gray-100 transition-all duration-300 max-sm:hidden">
             <p>{t('ceo.see_services')}</p>
             <Image src='/svgs/right-arrow.svg' alt={t('ceo.arrow_alt')} width={20} height={20} className='ml-2 inline-block' />
         </div>
@@ -48,12 +48,13 @@ export default function CEO() {
       <div className="relative min-h-[500px] flex flex-col items-center justify-center text-center px-4">
       {/* Background Image */}
       <Image 
-        src="/images/contact.png" 
+        src="/images/contact.jpg" 
         alt={t('ceo.contact_bg_alt')}
         fill
         className="object-cover"
         priority
       />
+      <div className="absolute inset-0 bg-black/50"></div>
 
       {/* Content */}
       <div className={"relative z-20 max-w-xs sm:max-w-2xl lg:max-w-4xl mx-auto"}>

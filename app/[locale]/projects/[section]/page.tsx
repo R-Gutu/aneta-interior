@@ -47,7 +47,7 @@ export default async function Page({params}: {params: Promise<{ section: Section
                     </Link>
                 ))}
             </div>
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-10 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
                 {projects.filter((p) => section in p).map((p, i) => (
                     (p) ? <Project 
                     left={i%2 === 0}

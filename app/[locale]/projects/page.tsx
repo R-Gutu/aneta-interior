@@ -21,12 +21,12 @@ export default async function Page({params}: {params: Promise<{ section: Section
                     {t('home')}
                 </h1>
                 <Image
-                    src='/images/projects-hero.png'
+                    src='/images/projects-hero.jpg'
                     alt='project'
                     width={800}
                     height={800}
                     priority
-                    className='w-full h-auto'
+                    className='w-full h-100 object-cover object-center rounded-tl-xl rounded-bl-xl rounded-br-xl rounded-tr-[130px]'
                 />
             </div>
             <div className="px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 flex flex-wrap justify-center sm:justify-start gap-2 sm:gap-3 my-8 sm:my-12 font-inter">

@@ -3,12 +3,49 @@
     "logoAlt": "logo",
     "burgerAlt": "burger",
     "closeAlt": "close menu",
-    "nav": {
-      "about": "About us",
-      "services": "Services",
-      "proiecte": "Projects",
-      "contacte": "Contacts"
-    }
+        "nav": {
+            "about": "About us",
+            "services": "Services",
+            "proiecte": "Projects",
+            "contacte": "Contacts"
+        }
+    },
+    "footer": {
+  "logoAlt": "Aneta Design Interior Logo",
+  "followUs": "Follow us on",
+  "contactHeading": "CONTACTS",
+  "phoneLabel": "PHONE:",
+  "addressLabel": "ADDRESS:",
+  "addressLine1": "Romania, Bucharest municipality",
+  "addressLine2": "Splaiul Independentei street, 202 B",
+  "navLabel": "Navigation",
+  "languageSelectLabel": "Languages",
+  "languageRO": "RO",
+  "languageEN": "EN",
+  "copyright": "© 2025 Aneta Design Interior. All rights reserved.",
+  "createdBy": "Created by",
+  "nav": {
+    "about": "About us",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact"
+  }
+},
+"contactForm": {
+  "title": "Creative Project?",
+  "subtitle": "Let's have a productive discussion.",
+  "fullNameLabel": "Full Name",
+  "fullNamePlaceholder": "Enter your name",
+  "emailLabel": "Email",
+  "emailPlaceholder": "Enter your email address",
+  "servicesLabel": "Select the services you need:",
+  "services": {
+    "render3d": "3D Rendering",
+    "designMobilier": "Custom Furniture Design",
+    "pachetPlus": "Plus Package",
+    "designExterior": "Exterior Design (facades, terraces, courtyards)",
+    "implementare": "Implementation",
+    "consultanta": "Interior Design Consultation"
   },
   "footer": {
     "logoAlt": "Aneta Design Interior Logo",
@@ -195,15 +232,15 @@
     "services_bottom_alt": "Services Bottom"
   },
   "ourServices": {
-    "title": "Our Services",
-    "description": "We offer a comprehensive range of web design and development services, tailored to your business's specific needs. From creative concepts to advanced technical implementations, our team helps you transform your ideas into digital reality.",
-    "design3d_title": "3D Web Design",
-    "design3d_description": "We create interactive and captivating web experiences with modern 3D elements. Using cutting-edge technologies, we develop websites that stand out through innovative design and advanced functionality, providing users with a unique and memorable experience.",
-    "design_avansat_title": "Advanced Web Design",
-    "design_avansat_description": "We develop complex and customized web solutions, adapted to your business's specific requirements. From interactive web applications to advanced e-commerce platforms, we implement the latest technologies to give you a competitive advantage in the market.",
-    "design_all_inclusive_title": "Complete Design Package",
-    "design_all_inclusive_description": "The complete solution for your online presence - from concept and design to development, SEO optimization, and maintenance. We include everything: responsive design, search engine optimization, social media integration, and continuous technical support."
-  },
+      "title": "Our Services",
+      "description": "We offer a complete range of design and web development services, tailored to your business's specific needs. From creative concepts to advanced technical implementations, our team helps you transform your ideas into digital reality.",
+      "design3d_title": "3D Design – Visualization & Concept",
+      "design3d_description": "1. Survey and furniture layout – based on actual measurements or existing plans\n2. Concept board – visual proposal with style, colors, textures\n3. Photorealistic 3D renders – 2–4 images per room, for a clear vision of the space\n4. Indicative furniture and accessories list – with dimensions and purchase suggestions\n\nIdeal for clients who have their own execution team but want clear aesthetic direction.",
+      "design_avansat_title": "Advanced Design – Complete Interior Project",
+      "design_avansat_description": "1. Detailed survey + personalized furniture plans\n2. Design moodboard – color palette, finishes, furniture, lighting\n3. Photorealistic 3D renders – 4–8 images per room, from different angles\n4. Technical plans:\n   • Furniture with approximate dimensions\n   • Lighting & outlets\n   • Plumbing installations\n   • Finishes and flooring\n5. Complete purchase list – recommended products, codes, links\n\nSuitable for clients who want a clear project to implement with their own team.",
+      "design_all_inclusive_title": "All-Inclusive Design – Project + Implementation",
+      "design_all_inclusive_description": "1. On-site consultation and measurements\n2. Complete design project (as in the advanced package)\n3. Work planning + phased estimated budget\n4. Execution team coordination – collaborators or own team\n5. Assisted purchases – support with orders, deliveries, returns\n6. Author supervision – verification of implementation according to project\n7. Final styling + decoration – curtains, accessories, art deco\n\nFull-service for clients who want everything managed from A to Z."
+    },
   "common": {
     "viewExamples": "View Examples"
   },

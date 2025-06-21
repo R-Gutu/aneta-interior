@@ -21,11 +21,11 @@ export default function InteriorShowcase() {
           {/* Image */}
           <div className="order-2 lg:order-1 lg:border-r-2 lg:pr-6 pb-6 border-[#EAE9E5] h-full">
             <Image
-              src="/images/interior1.png"
+              src="/images/interior1.jpg"
               alt={t('interiorShowcase.cluj_interior_alt')}
               width={600}
               height={400}
-              className="w-full h-auto object-cover rounded-2xl"
+              className="w-full h-auto object-cover rounded-tl-[80px] rounded-br-[80px]"
             />
           </div>
           
@@ -93,11 +93,11 @@ export default function InteriorShowcase() {
           {/* Image */}
           <div className="order-2 lg:border-l-2 border-[#EAE9E5] lg:pl-6 pb-6">
             <Image
-              src="/images/interior2.png"
+              src="/images/interior2.jpg"
               alt={t('interiorShowcase.urban_interior_alt')}
               width={600}
               height={400}
-              className="w-full h-auto object-cover rounded-2xl"
+              className="w-full h-auto object-cover rounded-tr-[80px]"
             />
           </div>
         </div>

@@ -16,19 +16,19 @@ export default function OurServices() {
                 <Accordion
                     titleKey="ourServices.design3d_title"
                     contentKey="ourServices.design3d_description"
-                    imagePath="/images/faq1.png"
+                    imagePath="/images/faq1.jpg"
                     link="/projects"
                 />
                 <Accordion
                     titleKey="ourServices.design_avansat_title"
                     contentKey="ourServices.design_avansat_description"
-                    imagePath="/images/faq1.png"
+                    imagePath="/images/faq2.jpg"
                     link="/projects"
                 />
                 <Accordion
                     titleKey="ourServices.design_all_inclusive_title"
                     contentKey="ourServices.design_all_inclusive_description"
-                    imagePath="/images/faq1.png"
+                    imagePath="/images/faq3.jpg"
                     link="/projects"
                 />
             </div>
