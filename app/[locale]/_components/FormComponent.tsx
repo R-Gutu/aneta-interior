@@ -12,7 +12,7 @@ export default function FormComponent() {
           {t('subtitle')}
         </p>
         <br /><br /><br />
-        <FormElement />
+        <FormElement showPhone={true} />
       </div>
     </div>
   )

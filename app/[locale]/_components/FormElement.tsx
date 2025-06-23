@@ -19,9 +19,12 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { useTranslations } from 'next-intl';
 
 // EmailJS Configuration Constants - Fill these with your actual values
-const EMAILJS_SERVICE_ID = 'service_ygz6zab';
-const EMAILJS_TEMPLATE_ID = 'template_zyvruk2';
-const EMAILJS_PUBLIC_KEY = 'NxaXNUOZOCYcvu-Jx';
+const EMAILJS_SERVICE_ID = 'service_62o6enz'; 
+//  service_ygz6zab
+const EMAILJS_TEMPLATE_ID = 'template_kdqt7gg';
+// template_zyvruk2
+const EMAILJS_PUBLIC_KEY = 'AIa1W7ML_7ntMF3d1';
+// NxaXNUOZOCYcvu-Jx
 
 const formSchema = z.object({
   fullName: z.string().min(2, "Name must be at least 2 characters").max(50, "Name must be less than 50 characters"),
