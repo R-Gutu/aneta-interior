@@ -25,7 +25,7 @@ export default async function Page({params}: {params: Promise<{ section: Section
                     {t('home')}
                 </h1>
                 <Image
-                    src='/images/projects-hero.png'
+                    src='/images/projects-hero.svg'
                     alt='project'
                     width={800}
                     height={800}

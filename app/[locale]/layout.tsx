@@ -6,6 +6,7 @@ import { domAnimation, LazyMotion } from "motion/react";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
 import { GoogleAnalytics } from '@next/third-parties/google';
+import PhoneButton from "@/components/PhoneButton";
 
 const inter = Inter({
   subsets: ['latin', 'cyrillic'],
@@ -64,6 +65,7 @@ export default function RootLayout({
             <Footer />
           </NextIntlClientProvider>
         </LazyMotion>
+        <PhoneButton />
       </body>
       <GoogleAnalytics gaId="G-0TQCPVCQCK" />
     </html>
