@@ -39,8 +39,14 @@ export default function Partners() {
         },
         {
             id: 6,
-            name: "Elves",
+            name: "WallDeco",
             logo: "/images/partners6.png",
+            alt: "2112"
+        },
+        {
+            id: 7,
+            name: "Elves",
+            logo: "/images/partners7.png",
             alt: t('partners.elves_alt')
         }
     ];

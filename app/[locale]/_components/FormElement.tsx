@@ -273,7 +273,7 @@ export default function FormElement({ showPhone = false }: { showPhone?: boolean
           <Button
             type="submit"
             disabled={isSubmitting}
-            className="cursor-pointer bg-gray-800 text-white px-8 py-3 hover:bg-gray-900 disabled:opacity-50"
+            className="cursor-pointer oklch(14.7% 0.004 49.25) text-white px-8 py-3 hover:oklch(14.7% 0.004 49.25)"
           >
             {isSubmitting ? (
               <span className="flex items-center justify-center">
