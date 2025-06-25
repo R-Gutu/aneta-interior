@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { getTranslations, getLocale } from "next-intl/server";
 import { projects } from "@/lib/data/projects.data";
 import Project from "@/app/[locale]/projects/_components/Project";
+
 type SectionKey = 'living' | 'kitchen' | 'bedroom' | 'bathroom' | 'bedroom_children';
 
 export default async function Page() {
@@ -24,7 +25,7 @@ export default async function Page() {
                     {t('home')}
                 </h1>
                 <Image
-                    src='/images/projects-hero.jpg'
+                    src='/images/projects-hero.svg'
                     alt='project'
                     width={800}
                     height={800}
@@ -47,11 +48,21 @@ export default async function Page() {
 
             <div className="flex flex-col gap-10 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
                 {projects.map((p, i) => {
-                    const section = Object.keys(p).find((key) =>
-                        ['living', 'kitchen', 'bedroom', 'bathroom', 'bedroom_children'].includes(key)
-                    ) as SectionKey;
+                    const allSections: SectionKey[] = ['living', 'kitchen', 'bedroom', 'bathroom', 'bedroom_children'];
+                    const allImages: { section: SectionKey; image: string }[] = [];
 
-                    const images = section && p[section] ? p[section].map((o) => o.image) : [];
+                    for (const key of allSections) {
+                        if (p[key]) {
+                            p[key].forEach((img: { image: string }) => {
+                                allImages.push({ section: key, image: img.image });
+                            });
+                        }
+                    }
+
+                    const images = [
+                        ...allImages.filter(img => img.section === 'kitchen' || img.section === 'living'),
+                        ...allImages.filter(img => img.section !== 'kitchen' && img.section !== 'living')
+                    ].map(img => img.image);
 
                     return (
                         <Project

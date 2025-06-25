@@ -48,6 +48,12 @@ export default function Partners() {
             name: "Elves",
             logo: "/images/partners7.png",
             alt: t('partners.elves_alt')
+        },
+        {
+            id: 8,
+            name: "Sun Mobila",
+            logo: "/images/partners8.png",
+            alt: t('partners.sun_mobila')
         }
     ];
 

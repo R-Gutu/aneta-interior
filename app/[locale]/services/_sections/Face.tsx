@@ -118,7 +118,7 @@ export default function Face() {
             >
                 <Image
                     priority
-                    src={"/images/services-left.jpg"}
+                    src={"/images/services-left.svg"}
                     fill
                     className='object-cover'
                     alt={t('face.services_left_alt')} // LOCALIZED Image alt

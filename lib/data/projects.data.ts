@@ -4,7 +4,7 @@ export const projects = [
   {
     id: 1,
     titleRO: 'Golden Soft',
-    descriptionRO: 'Un proiect de design interior cu timbrul rafinamentului modern cu accente luxoase. Într-o piesă calmă de crem, alb și auriu. Spațiile sunt organizate ca o poveste frumoasă în vacanțe de finisaje elegante, texturi fine și detalii metalice sofisticate. Acest design inspiră o atmosferă de relaxare, transformând un spațiu în mobilierul căptuțat și suprafețele lucioase conferind o atmosferă de lux discret, iar accente de auriu pentru un stil de viață contemporan cu accente glam.',
+    descriptionRO: 'Un proiect de design interior ce îmbină rafinamentul modern cu accente luxoase, într-o paletă calmă de crem, alb și auriu. Spațiile sunt luminoase, aerisite și echilibrate, puse în valoare de finisaje elegante, texturi fine și detalii metalice sofisticate. Corpurile de iluminat cu cristale, mobilierul capitonat și suprafețele lucioase conturează o atmosferă caldă, dar sofisticată – perfectă pentru un stil de viață contemporan cu accente glam.',
     titleEN: 'Golden Soft',
     descriptionEN: 'An interior design project with the hallmark of modern refinement with luxurious accents. In a calm piece of cream, white, and gold. The spaces are organized as a beautiful story on holidays of elegant finishes, fine textures, and sophisticated metallic details. This design inspires an atmosphere of relaxation, transforming a space into upholstered furniture, and glossy surfaces conferring an atmosphere of discreet luxury, alongside golden accents for a contemporary lifestyle with glam accents.',
     bedroom: [

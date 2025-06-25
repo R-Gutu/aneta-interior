@@ -22,7 +22,7 @@
   "languageSelectLabel": "Languages",
   "languageRO": "RO",
   "languageEN": "EN",
-  "copyright": "© 2025 Aneta Design Interior. All rights reserved.",
+  "copyright": "© 2025 Aneta Interior. All rights reserved.",
   "createdBy": "Created by",
   "nav": {
     "about": "About us",
@@ -87,7 +87,8 @@
     "years_on_market": "years on the market",
     "projects_done": "projects completed",
     "eu_projects": "projects in the EU",
-    "happy_clients": "satisfied clients"
+    "happy_clients": "satisfied clients",
+    "sun_mobila": "Sun Mobila furniture partner"
   },
   "main-projects": {
     "title": "Our Projects",
@@ -196,7 +197,7 @@
   },
   "ourServices": {
       "title": "Our Services",
-      "description": "We offer a complete range of design and web development services, tailored to your business's specific needs. From creative concepts to advanced technical implementations, our team helps you transform your ideas into digital reality.",
+      "description": "We offer comprehensive interior design solutions, tailored to your needs and style. From creative concepts to flawless execution, our team of specialists transforms spaces into functional, aesthetic, and inspiring environments. Whether you're designing a modern office, a welcoming home, or an attractive commercial space, we guarantee attention to detail, superior quality, and results that exceed expectations.\n",
       "design3d_title": "3D Design – Visualization & Concept",
       "design3d_description": "1. Survey and furniture layout – based on actual measurements or existing plans\n2. Concept board – visual proposal with style, colors, textures\n3. Photorealistic 3D renders – 2–4 images per room, for a clear vision of the space\n4. Indicative furniture and accessories list – with dimensions and purchase suggestions\n\nIdeal for clients who have their own execution team but want clear aesthetic direction.",
       "design_avansat_title": "Advanced Design – Complete Interior Project",

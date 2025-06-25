@@ -22,7 +22,7 @@
   "languageSelectLabel": "Limbi",
   "languageRO": "RO",
   "languageEN": "EN",
-  "copyright": "© 2025 Aneta Design Interior. Toate drepturile rezervate.",
+  "copyright": "© 2025 Aneta Interior. Toate drepturile rezervate.",
   "createdBy": "Creat de",
   "nav": {
     "about": "Despre noi",
@@ -87,7 +87,8 @@
     "years_on_market": "ani pe piață",
     "projects_done": "proiecte realizate",
     "eu_projects": "proiecte în UE",
-    "happy_clients": "clienți mulțumiți"
+    "happy_clients": "clienți mulțumiți",
+    "sun_mobila": "Partener de mobilă Sun Mobila"
   },
   "main-projects": {
     "title": "Proiectele noastre",
@@ -196,7 +197,7 @@
   },
   "ourServices": {
       "title": "Serviciile Noastre",
-      "description": "Oferim o gamă completă de servicii de design și dezvoltare web, adaptate nevoilor specifice ale afacerii dumneavoastră. De la concepte creative la implementări tehnice avansate, echipa noastră vă ajută să vă transformați ideile în realitate digitală.",
+      "description": "Oferim soluții complete de design interior, personalizate în funcție de nevoile și stilul dumneavoastră. De la concepte creative la execuție impecabilă, echipa noastră de specialiști transformă spațiile în locuri funcționale, estetice și pline de inspirație. Indiferent dacă proiectați un birou modern, o locuință primitoare sau un spațiu comercial atrăgător, vă garantăm atenție la detalii, calitate superioară și rezultate care depășesc așteptările.",
       "design3d_title": "Design 3D – Vizualizare & Concept",
       "design3d_description": "1. Releveu și plan mobilare – pe baza măsurătorilor reale sau ale planului existent\n2. Tablou de concept – propunere vizuală cu stil, culori, texturi\n3. Randări 3D fotorealiste – 2–4 imagini pe cameră, pentru o viziune clară asupra spațiului\n4. Listă orientativă de mobilier și accesorii – cu dimensiuni și sugestii de achiziție\n\nIdeal pentru clienții care au echipă proprie de execuție, dar vor o direcție estetică clară.",
       "design_avansat_title": "Design Avansat – Proiect Complet de Amenajare",
