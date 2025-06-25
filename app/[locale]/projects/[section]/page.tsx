@@ -27,10 +27,10 @@ export default async function Page({ params }: { params: Promise<{ section: Sect
                     {t("home")}
                 </h1>
                 <Image
-                    src="/images/project-hero.svg"
+                    src="/images/project-hero.jpg"
                     alt="project"
-                    width={800}
-                    height={800}
+                    width={2284}
+                    height={696}
                     priority
                     className="w-full h-auto"
                 />

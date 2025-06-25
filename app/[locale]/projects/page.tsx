@@ -25,10 +25,10 @@ export default async function Page() {
                     {t('home')}
                 </h1>
                 <Image
-                    src='/images/projects-hero.svg'
+                    src='/images/projects-hero.jpg'
                     alt='project'
-                    width={800}
-                    height={800}
+                    width={2284}
+                    height={696}
                     priority
                     className='w-full h-100 object-cover object-center rounded-tl-xl rounded-bl-xl rounded-br-xl rounded-tr-[130px]'
                 />

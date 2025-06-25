@@ -28,7 +28,7 @@ export default function Steps() {
             <StepRight
                 titleKey="steps.modeling_3d_title"
                 contentKey="steps.modeling_3d_description"
-                imagePath="/images/steps3.svg"
+                imagePath="/images/steps3.jpg"
                 number="03"
             />
             <StepLeft

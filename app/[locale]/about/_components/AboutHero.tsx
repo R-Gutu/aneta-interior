@@ -30,7 +30,7 @@ export default function AboutHero() {
         {/* Image Section */}
         <div className="px-4 sm:px-8 md:px-12 lg:px-20">
             <Image 
-                src="/images/about-hero.svg"
+                src="/images/about-hero.jpg"
                 alt={t('aboutHero.image_alt')} 
                 width={800} 
                 height={600} 
