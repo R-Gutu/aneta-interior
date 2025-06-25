@@ -32,8 +32,8 @@ export default function AboutHero() {
             <Image 
                 src="/images/about-hero.jpg"
                 alt={t('aboutHero.image_alt')} 
-                width={800} 
-                height={600} 
+                width={2284}
+                height={696}
                 priority
                 className='w-full h-100 object-cover object-center mt-6 md:mt-8 lg:mt-10 rounded-tl-xl rounded-bl-xl rounded-br-xl rounded-tr-[130px]' 
             />
