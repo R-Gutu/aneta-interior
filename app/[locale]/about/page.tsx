@@ -4,7 +4,7 @@ import AboutAna from './_components/AboutAna'
 import InteriorShowcase from './_components/InteriorShowcase'
 const page = () => {
   return (
-    <div className="">
+    <div className="pt-[30px] md:pt-0">
       <AboutHero />
       <AboutAna />
       <InteriorShowcase />

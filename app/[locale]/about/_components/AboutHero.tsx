@@ -29,13 +29,23 @@ export default function AboutHero() {
 
         {/* Image Section */}
         <div className="px-4 sm:px-8 md:px-12 lg:px-20">
+            {/* Desktop/Tablet image */}
             <Image 
                 src="/images/about-hero.jpg"
                 alt={t('aboutHero.image_alt')} 
                 width={2284}
                 height={696}
                 priority
-                className='w-full h-100 object-cover object-center mt-6 md:mt-8 lg:mt-10 rounded-tl-xl rounded-bl-xl rounded-br-xl rounded-tr-[130px]' 
+                className='hidden sm:block w-full h-100 object-cover object-center mt-8 md:mt-10 rounded-tl-xl rounded-bl-xl rounded-br-xl rounded-tr-[130px]'
+            />
+            {/* Mobile image */}
+            <Image
+                src="/images/about-hero-mobile.jpg"
+                alt={t('aboutHero.image_alt')}
+                width={800}
+                height={600}
+                priority
+                className='block sm:hidden w-full h-auto object-cover object-center mt-6 rounded-xl'
             />
         </div>
 

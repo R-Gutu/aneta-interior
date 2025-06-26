@@ -5,7 +5,7 @@ import Steps from "./_sections/Steps"
 import Form from "../_components/FormComponent"
 const page = () => {
   return (
-    <div>
+    <div className="pt-[30px] md:pt-0">
       <Face />
       <OurServices />
       <Steps />
