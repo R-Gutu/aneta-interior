@@ -25,7 +25,7 @@ export default async function Page() {
                     {t('home')}
                 </h1>
                 <Image
-                    src='/images/projects-hero.jpg'
+                    src='/images/projects-hero.png'
                     alt='project'
                     width={2284}
                     height={696}
