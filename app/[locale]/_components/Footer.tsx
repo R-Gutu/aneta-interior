@@ -31,7 +31,7 @@ export default function Footer() {
         { name: t('nav.about'), href: "/about" },
         { name: t('nav.services'), href: "/services" },
         { name: t('nav.projects'), href: "/projects" },
-        { name: t('nav.contact'), href: "/contact" }
+        { name: t('nav.contact'), href: "/contacts" }
     ];
 
     return (

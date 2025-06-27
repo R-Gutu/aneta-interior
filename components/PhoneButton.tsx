@@ -8,7 +8,7 @@ export default function PhoneButton() {
     const [open, setOpen] = useState(false);
 
     return (
-        <div className="fixed bottom-6 right-6 z-50">
+        <div className="fixed bottom-8 right-6 z-50">
             {/* Main button */}
             <button
                 onClick={() => setOpen(!open)}
@@ -20,7 +20,7 @@ export default function PhoneButton() {
 
             {/* Dropdown menu */}
             {open && (
-                <div className="absolute bottom-20 right-0 flex flex-col gap-3">
+                <div className="absolute bottom-22 right-0 flex flex-col gap-3">
                     <a
                         href="tel:+40 732 678 611"
                         className="bg-gradient-to-r from-[#3A7DFF] to-[#0D6EFD] text-white p-4 rounded-md shadow-md hover:shadow-lg transition-all transform hover:scale-105 flex items-center gap-3"
