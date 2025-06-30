@@ -74,6 +74,28 @@ export default function RootLayout({
             fbq('init', '${FB_PIXEL_ID}');
             fbq('track', 'PageView');`}
         </Script>
+
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=AW-16667072719`}
+      />
+      <Script
+        id="google-ads-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date()); 
+
+            gtag('config', 'G-0TQCPVCQCK');
+
+            // Google Ads
+            gtag('config', 'AW-16667072719');
+          `,
+        }}
+      />
+
         <noscript dangerouslySetInnerHTML={{
           __html: `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=${FB_PIXEL_ID}&ev=PageView&noscript=1"/>`,
         }} />

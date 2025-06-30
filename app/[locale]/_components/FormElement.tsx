@@ -34,6 +34,21 @@ const formSchema = z.object({
   message: z.string().min(10, "Message must be at least 10 characters").max(1000, "Message must be less than 1000 characters"),
 });
 
+function gtag_report_conversion(url?: string) {
+  const callback = () => {
+    if (url !== undefined) {
+      window.location.href = url;
+    }
+  };
+
+  if (typeof window !== 'undefined' && typeof window.gtag !== 'undefined') {
+    window.gtag('event', 'conversion', {
+      send_to: 'AW-16667072719/eD-xCOKajOUaEM-xvYs-',
+      event_callback: callback,
+    });
+  }
+}
+
 type FormData = z.infer<typeof formSchema>;
 
 export default function FormElement({ showPhone = false }: { showPhone?: boolean }) {
@@ -105,6 +120,8 @@ export default function FormElement({ showPhone = false }: { showPhone?: boolean
 
       console.log('EmailJS Success:', result);
       alert(t('successMessage') || 'Message sent successfully!');
+
+      gtag_report_conversion();
 
       // Reset form after successful submission
       form.reset({
