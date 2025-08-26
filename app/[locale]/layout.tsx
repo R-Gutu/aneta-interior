@@ -77,7 +77,7 @@ export default function RootLayout({
 
       <Script
         strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=AW-16667072719`}
+        src={`https://www.googletagmanager.com/gtag/js?id=G-0TQCPVCQCK`}
       />
       <Script
         id="google-ads-init"
@@ -91,7 +91,7 @@ export default function RootLayout({
             gtag('config', 'G-0TQCPVCQCK');
 
             // Google Ads
-            gtag('config', 'AW-16667072719');
+            // gtag('config', 'AW-16667072719');
           `,
         }}
       />
