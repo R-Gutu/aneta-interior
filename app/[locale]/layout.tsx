@@ -5,7 +5,6 @@ import { NextIntlClientProvider } from "next-intl";
 import { domAnimation, LazyMotion } from "motion/react";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
-import { GoogleAnalytics } from '@next/third-parties/google';
 import PhoneButton from "@/components/PhoneButton";
 import Script from 'next/script';
 
@@ -89,9 +88,6 @@ export default function RootLayout({
             gtag('js', new Date()); 
 
             gtag('config', 'G-0TQCPVCQCK');
-
-            // Google Ads
-            // gtag('config', 'AW-16667072719');
           `,
         }}
       />
@@ -108,7 +104,6 @@ export default function RootLayout({
         </LazyMotion>
         <PhoneButton />
       </body>
-      <GoogleAnalytics gaId="G-0TQCPVCQCK" />
     </html>
   );
 }
