@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { domAnimation, LazyMotion } from "motion/react";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
+import { GoogleAnalytics } from '@next/third-parties/google';
 import PhoneButton from "@/components/PhoneButton";
 import Script from 'next/script';
 
@@ -74,7 +75,7 @@ export default function RootLayout({
             fbq('track', 'PageView');`}
         </Script>
 
-      <Script
+      {/* <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=G-0TQCPVCQCK`}
       />
@@ -90,7 +91,7 @@ export default function RootLayout({
             gtag('config', 'G-0TQCPVCQCK');
           `,
         }}
-      />
+      /> */}
 
         <noscript dangerouslySetInnerHTML={{
           __html: `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=${FB_PIXEL_ID}&ev=PageView&noscript=1"/>`,
@@ -104,6 +105,7 @@ export default function RootLayout({
         </LazyMotion>
         <PhoneButton />
       </body>
+      <GoogleAnalytics gaId="G-0TQCPVCQCK" />
     </html>
   );
 }
